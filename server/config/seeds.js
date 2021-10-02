@@ -60,7 +60,7 @@ db.once('open', async () => {
             category: categories[2]._id,
             description:
                 'Alleviate dry skin with our Hyaluronic Acid Serum. This serum draws moisture to the skin, promoting a more vitalized complexion. ',
-            image: 'soap.jpg',
+            image: 'dropper_green.jpg',
             price: 13.99,
             quantity: 50
         },
