@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+const stripe = require('stripe')('sk_test_51JgHG1K26w07WHByUVTOBwODILpxij5pU0xHRDuB7pF9dTsL2x7ygvgq5bV6srwDTyzNBqgWHnPlydSGWSzuhlO100778kRLKf');
 
 
 const resolvers = {
@@ -26,7 +26,7 @@ const resolvers = {
       return await Product.find(params).populate('category');
     },
     product: async (parent, {_id}) => {
-      return await Product.find(_id).populate('category');
+      return await Product.findBy(_id).populate('category');
     },
     user: async (parent, args, context) => {
       if (context.user) {
@@ -55,17 +55,17 @@ const resolvers = {
 
       throw new AuthenticationError('Must be logged in');
     },
-    checkout: async (parents, args, context) => {
+    checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
-      const chosen_items = [];
+      const list_items = [];
 
       const { products } = await order.populate('products').execPopulate();
 
       for (let i = 0; i < products.length; i++) {
         const product = await stripe.products.create({ 
           name: products[i].name,
-          descriptions: products[i].description,
+          description: products[i].description,
           images: [`${url}/images/${products[i].image}`]
         });
 
@@ -75,8 +75,8 @@ const resolvers = {
           currency: 'usd',
         });
 
-        // push items to chosen_items array
-        chosen_items.push({ 
+        // push items to list_items array
+        list_items.push({ 
           price: price.id,
           quantity: 1
         });
