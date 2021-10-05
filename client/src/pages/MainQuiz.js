@@ -1,9 +1,3 @@
-//////MAIN INDEX JS COMPONENT 
-
-
-
-
-
 import React, { Component } from 'react';
 //import './MainQuiz.css';
 import Quiz from './Quiz';
