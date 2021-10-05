@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './MainQuiz.css';
-import Quiz from '../components/Quiz/Quiz';
-import quizQuestions from '../components/Quiz/api/quizQuestions';
-import Results from '../components/Quiz/Results';
+//import './MainQuiz.css';
+import Quiz from './Quiz';
+import quizQuestions from '../api/quizQuestions';
+import Results from './Results';
 
 //Main quiz code to render all the parts of the quiz
 class MainQuiz extends Component {
