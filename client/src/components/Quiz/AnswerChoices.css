@@ -1,0 +1,23 @@
+/*Styling for the answer choices*/
+
+.answerChoices {
+    list-style: none;
+    margin: 0;
+    padding: 15; 
+}
+
+
+.answerBtnContent {
+    font-size: 110%;
+    text-align: left;
+    width: 100%;
+    padding: 2%;
+    line-height: 2;
+}
+
+.answerChoice {
+    padding: 5px;
+}
+
+
+
