@@ -68,6 +68,12 @@ const loggedMenuItems = [
     listText: "Logout",
     listPath: '/'
 
+  },
+  {
+    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='black' />,
+    listText: "MAIN QUIZ",
+    listPath: '/mainQuiz'
+
   }
 ]
 
@@ -87,6 +93,12 @@ const notLoggedMenuItems = [
     listIcon: <FontAwesomeIcon icon={faSignInAlt} color='black' />,
     listText: "Login",
     listPath: '/login'
+  },
+  {
+    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='black' />,
+    listText: "MAIN QUIZ",
+    listPath: '/mainQuiz'
+
   }
 ]
 
