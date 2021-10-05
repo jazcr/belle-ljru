@@ -1,19 +1,19 @@
 //Creating the quiz questions and answer choices
 const quizQuestions = [
     {
-        question: 'What skin type do you have?',
+        question: 'How does your skin feel throughout the day?',
         answers: [
             {
                 type: 'Oily',
-                content: 'Oily Skin'
+                content: 'Shiny and Greasy'
             },
             {
                 type: 'Dry',
-                content: 'Dry Skin'
+                content: 'Dry and Flakey'
             },
             {
                 type: 'Combination/Normal',
-                content: 'Combination/Normal Skin'
+                content: 'Normal and Balanced'
             }
         ]
     },

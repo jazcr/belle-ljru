@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from 'prop-types';
 import './Question.css';
+
 
 //Function for displaying the questions
 function Questions(props) {
@@ -10,10 +10,5 @@ function Questions(props) {
     );
 }
 
-//Using PropTypes to validate data
-//Content is required for the question
-Questions.propTypes = {
-    content: PropTypes.string.isRequired
-};
 
 export default Questions;

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from 'prop-types';
 import './AnswerChoices.css';
 
 //Function for the answer choices for each question
@@ -27,16 +26,5 @@ function AnswerChoices(props) {
         </li>
     );
 }
-
-{/*Using PropTypes to validate data
-Making sure the type, content, and answer are required and that when an answer
-is selected a function will be required*/}
-    AnswerChoices.propTypes = {
-        answerType: PropTypes.string.isRequired,
-        answerContent: PropTypes.string.isRequired,
-        answer: PropTypes.string.isRequired,
-        onAnswerSelected: PropTypes.func.isRequired
-
-    };
 
     export default AnswerChoices;
