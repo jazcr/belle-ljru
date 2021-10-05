@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-//import './MainQuiz.css';
+import './MainQuiz.css';
 import Quiz from './Quiz';
-import quizQuestions from '../api/quizQuestions';
+import quizQuestions from '../components/Quiz/api/quizQuestions';
 import Results from './Results';
 
 //Main quiz code to render all the parts of the quiz
@@ -43,7 +43,7 @@ class MainQuiz extends Component {
       this.nextQuestion();
     } else {
       //Else If the user is at the last question of the quiz then the users results are determine with the setResults function and is shown with the getResults function
-      this.setResults(this.getResults());
+      this.setResults(this.getSkinResults());
     }
    
   }
@@ -77,7 +77,7 @@ class MainQuiz extends Component {
 
   
   //Function to get results
-  getResults() {
+  getSkinResults() {
     //Keeping track of the answers and ids the user is choosing
     const answerCount = this.state.answerCount;
     const answerCountKeys = Object.keys(answerCount);
@@ -123,7 +123,7 @@ class MainQuiz extends Component {
     return (
       <div className="content">
         <div className="header">
-          <h2>Skin Care Quiz</h2>
+         
           <br />
         </div>
         {/*If the user has chosen answers render the results page otherwise render the quiz*/}

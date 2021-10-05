@@ -1,11 +1,20 @@
 import React from 'react';
-import PropTypes, { func } from 'prop-types';
 import Questions from './Question';
 import AnswerChoices from './AnswerChoices';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles(theme => ({
+  quizBody: {
+    backgroundColor: 'red'
+  }
+
+}))
 
 //Function for how the quiz is displayed
 function Quiz(props) {
+ 
   function renderAnswerChoices(key) {
+    
     //Funciton to render the answer choices with the proper data
     return (
       <AnswerChoices
@@ -18,10 +27,11 @@ function Quiz(props) {
       />
     );
   }
-
+  
+  const classes = useStyles();
   return (
     //Rendering the questions with the answer choices as unordered list 
-      <div key={props.questionId}>
+      <div key={props.questionId} className={classes.quizBody}>
              <Questions content={props.question} />
         <ul className="answerChoice">
           {props.answerChoices.map(renderAnswerChoices)}
@@ -30,16 +40,6 @@ function Quiz(props) {
   );
 }
 
-//Using PropTypes to validate data
-//Anser Choices is an array of the different choices the user can pick from 
-Quiz.propTypes = {
-  answer: PropTypes.string.isRequired,
-  answerChoices: PropTypes.array.isRequired,
-  question: PropTypes.string.isRequired,
-  questionId: PropTypes.number.isRequired,
-  questionTotal: PropTypes.number.isRequired,
-  onAnswerSelected: PropTypes.func.isRequired
-};
 
 export default Quiz;
 
