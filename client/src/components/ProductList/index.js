@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductItem from '../ProductItem';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
@@ -8,6 +8,9 @@ import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
 function ProductList() {
+
+  const [search, setSearch ] = useState('');
+
   const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;
@@ -46,9 +49,10 @@ function ProductList() {
   return (
     <div className="my-2">
       <h2>Our Products:</h2>
+      <input value={search} onChange={e => setSearch(e.target.value)} />
       {state.products.length ? (
         <div className="flex-row">
-          {filterProducts().map((product) => (
+          {filterProducts().filter(product => product.name.toLowerCase().includes(search.toLowerCase())).map((product) => (
             <ProductItem
               key={product._id}
               _id={product._id}

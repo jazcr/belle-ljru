@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+
 :root {
   --primary: #232F3E;
   --secondary: #F3A847;
@@ -201,6 +204,10 @@ input:focus {
 
 .error-text {
   color: var(--error);
+}
+
+.labelText {
+  font-family: 'Ephesis', cursive;
 }
 
 @media screen and (max-width: 768px) {
