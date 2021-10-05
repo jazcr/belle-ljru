@@ -2,10 +2,11 @@ import { Typography, List, ListItem, ListItemText } from "@material-ui/core";
 import React, { Component } from "react";
 import { DryDef, OilyDef, ComboDef } from "../definitions/SkinTypeDef";
 
+//Creating the content and click functions for the skin type info cards
 class SkinTypes extends Component {
     constructor(props) {
         super(props)
-
+//Info cards default state is showing false = doesn't render until clicked
         this.state = {
             showOily: false,
             showDry: false,
@@ -16,6 +17,7 @@ class SkinTypes extends Component {
         this.onComboDefClick = this.onComboDefClick.bind(this)
     }
 
+//Title and content that will be rendered for the Oily card
     renderOilyDef() {
         return (
             <OilyDef
@@ -26,11 +28,12 @@ class SkinTypes extends Component {
                 cleansers, exfoliating toners, and lightweight, 
                 oil-free moisturizers/SPF are going to be your best 
                 friend!!`}
+                //Back button
                 onBackClick={this.onOilyDefClick}
             />
         )
     }
-
+//Title and content that will be rendered for the Dry skin card
     renderDryDef() {
         return (
             <DryDef
@@ -43,7 +46,7 @@ class SkinTypes extends Component {
         )
     }
 
-
+//Title and content that will be rendered for the Combo skin card
     renderComboDef() {
         return (
             <ComboDef
@@ -57,6 +60,9 @@ class SkinTypes extends Component {
         )
     }
 
+//If the users clicks to see the oily card, then render renderOilyDef
+//If the user clicks to see more about dry skin, then renderDryDef
+//If the user clickes to see more about combo/normal skin renderComboDef
     render() {
         let showOily = this.state.showOily
         let showDry = this.state.showDry
@@ -70,15 +76,20 @@ class SkinTypes extends Component {
         }
         return (
             <div>
+                {/*The users results */}
                 <Typography variant='h4' style={{ textAlign: 'center' }}>You have <span style={{ color: '#AB90D0', variant: 'h3', fontWeight: 'bold' }}>{this.props.result}</span> skin!</Typography>
                 <br />
+                {/*The list to render the info cards about the different skin types */}
                 <List>
+                    {/*When user clicks this text the oily card will render */}
                     <ListItem onClick={this.onOilyDefClick}>
                         <ListItemText> Learn more about <span style={{ color: '#AB90D0', fontWeight: 'bold' }}> Oily</span> skin </ListItemText>
                     </ListItem>
+                     {/*When user clicks this text the dry card will render */}
                     <ListItem onClick={this.onDryDefClick}>
                         <ListItemText> Learn more about <span style={{ color: '#AB90D0', fontWeight: 'bold' }}> Dry</span> skin </ListItemText>
                     </ListItem>
+                     {/*When user clicks this text the combo/normal card will render */}
                     <ListItem onClick={this.onComboDefClick}>
                         <ListItemText> Learn more about <span style={{ color: '#AB90D0', fontWeight: 'bold' }}> Combination/Normal</span> skin </ListItemText>
                     </ListItem>
@@ -87,17 +98,17 @@ class SkinTypes extends Component {
             </div>
         )
     }
-
+//On click show the oily card, set the state to shown if not already
     onOilyDefClick() {
         let showOily = this.state.showOily
         this.setState({ showOily: !showOily })
     }
-
+//On click show the dry card, set the state to shown if not already
     onDryDefClick() {
         let showDry = this.state.showDry
         this.setState({ showDry: !showDry })
     }
-
+//On click show the combo/normal card, set the state to shown if not already
     onComboDefClick() {
         let showCombo = this.state.showCombo
         this.setState({ showCombo: !showCombo })

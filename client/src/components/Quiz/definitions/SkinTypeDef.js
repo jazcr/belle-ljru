@@ -3,6 +3,7 @@ import { Box, Grid, Card, CardContent, Button, Typography} from '@material-ui/co
 import { makeStyles } from "@material-ui/core";
 //import BackButton from "../BackButton";
 
+//Styling for the info cards
 const useStyles = makeStyles(theme => ({
     cardContainer: {
         backgroundColor: 'rgb(230, 224, 215)',
@@ -20,8 +21,10 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center'
     }
 
-}))
+}));
 
+//Creating info cards with the title and content so users can read more about the different skin types
+//Oily skin card
 const OilyDef = ({title, content, onBackClick }) => {
     const classes = useStyles();
     return (
@@ -37,6 +40,7 @@ const OilyDef = ({title, content, onBackClick }) => {
     )
 }
 
+//Dry skin card
 const DryDef = ({title, content, onBackClick }) => {
     const classes = useStyles();
     return (
@@ -52,6 +56,7 @@ const DryDef = ({title, content, onBackClick }) => {
     )
 }
 
+//Combo/normal skin card
 const ComboDef = ({title, content, onBackClick }) => {
     const classes = useStyles();
     return (
