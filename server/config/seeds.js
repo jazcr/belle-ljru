@@ -23,7 +23,7 @@ db.once('open', async () => {
             name: 'Gentle Foaming Cleanser',
             description:
                 'This gentle cleanser with a natural rose scent is MUST in your daily routine.',
-            image: 'dropper_green.jpg',
+            image: 'gentle_cleanse.jpg',
             category: categories[0]._id,
             price: 10.99,
             quantity: 500
@@ -33,7 +33,7 @@ db.once('open', async () => {
             category: categories[0]._id,
             description:
                 'Give your pores a proper cleansing with our Deep Clean Cleansing Gel.',
-            image: 'dropper_green.jpg',
+            image: 'deep_cleanse.jpg',
             price: 9.99,
             quantity: 100
         },
@@ -41,7 +41,7 @@ db.once('open', async () => {
             name: 'Brightening Toner',
             description:
                 'Promotes bright and smooth skin upon regular use.',
-            image: 'dropper_green.jpg',
+            image: 'toner.jpg',
             category: categories[1]._id,
             price: 11.99,
             quantity: 500
@@ -51,7 +51,7 @@ db.once('open', async () => {
             category: categories[1]._id,
             description:
                 'Exfoliate the day away with this overnight exfoliator that helps renew the skin by smoothing away dead skin cells while you sleep! ',
-            image: 'dropper_green.jpg',
+            image: 'exfoliant.jpg',
             price: 8.99,
             quantity: 20
         },
@@ -60,7 +60,7 @@ db.once('open', async () => {
             category: categories[2]._id,
             description:
                 'Alleviate dry skin with our Hyaluronic Acid Serum. This serum draws moisture to the skin, promoting a more vitalized complexion. ',
-            image: 'dropper_green.jpg',
+            image: 'hyal_serum.jpg',
             price: 13.99,
             quantity: 50
         },
@@ -69,7 +69,7 @@ db.once('open', async () => {
             category: categories[2]._id,
             description:
                 'By targeting early aging signs, this Multi-Peptide Serum promotes a healthy, youthful glow.',
-            image: 'dropper_green.jpg',
+            image: 'multi_serum.jpg',
             price: 11.99,
             quantity: 100
         },
@@ -78,7 +78,7 @@ db.once('open', async () => {
             category: categories[3]._id,
             description:
                 'This deep moisturizer will leave your skin feeling silky-smooth.',
-            image: 'dropper_green.jpg',
+            image: 'silky_moisture.jpg',
             price: 9.99,
             quantity: 30
         },
@@ -87,7 +87,7 @@ db.once('open', async () => {
             category: categories[3]._id,
             description:
                 'Our Priming Moisturizer will minimize the appearance of your pores while leaving your skin smooth and hydrated. ',
-            image: 'dropper_green.jpg',
+            image: 'priming_moisture.jpg',
             price: 10.99,
             quantity: 30
         },
@@ -95,7 +95,7 @@ db.once('open', async () => {
             name: 'Max Hydration Face Oil',
             category: categories[4]._id,
             description: 'Let your skin live it\'s most hydrated life with our Max Hydration Face Oil.',
-            image: 'dropper_green.jpg',
+            image: 'max_oil.jpg',
             price: 1.99,
             quantity: 1000
         },
@@ -104,7 +104,7 @@ db.once('open', async () => {
             category: categories[4]._id,
             description:
                 'Our Rosehip Seed Face Oil will help restore skin elasticity, leaving your skin feeling plump and hydrated.',
-            image: 'dropper_green.jpg',
+            image: 'rose_oil.jpg',
             price: 2.99,
             quantity: 1000
         },
@@ -113,7 +113,7 @@ db.once('open', async () => {
             category: categories[5]._id,
             description:
                 'Hydrate and protect your skin with our Radiant Sunblock - SPF 46. ',
-            image: 'dropper_green.jpg',
+            image: 'radiant_sun.jpg',
             price: 12.99,
             quantity: 100
         },
@@ -122,7 +122,7 @@ db.once('open', async () => {
             category: categories[5]._id,
             description:
                 'The protection of sunscreen without the excessive glow - SPF 46. Best for those with oily skin types.',
-            image: 'dropper_green.jpg',
+            image: 'anti_sun.jpg',
             price: 14.99,
             quantity: 600
         }
