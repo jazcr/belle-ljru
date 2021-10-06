@@ -7,8 +7,28 @@ import {
 } from '../../utils/actions';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
+import { makeStyles } from '@material-ui/core/styles';
+import {
+  Typography,
+  IconButton
+} from '@material-ui/core';
+
+const useStyles = makeStyles({
+  heading: {
+      color: '#000',
+      padding: '4rem 0 2rem 1rem',
+      textAlign: 'center',
+      fontFamily: "'Ephesis', cursive"
+  },
+  btn: {
+    paddingBottom: '4rem'    
+  }
+})
 
 function CategoryMenu() {
+
+  const classes = useStyles();
+
   const [state, dispatch] = useStoreContext();
 
   const { categories } = state;
@@ -42,19 +62,19 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      <h2>Choose a Category:</h2>
+    <>
+      <Typography className={classes.heading} variant='h3'>Belle L'JaRu Skincare: Love the skin you are in!</Typography>
       {categories.map((item) => (
-        <button
+        <IconButton className={classes.btn}
           key={item._id}
           onClick={() => {
             handleClick(item._id);
           }}
         >
           {item.name}
-        </button>
+        </IconButton>
       ))}
-    </div>
+    </>
   );
 }
 

@@ -36,7 +36,7 @@ import {
 const useStyles = makeStyles(theme => ({
   menuSliderContainer: {
     width: 250,
-    background: 'white',
+    background: '#96BD8A',
     height: '100%',
   },
   avatar: {
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(20),
   },
   listItem: {
-    color: 'black'
+    color: 'white'
   }
 }));
 
@@ -64,13 +64,13 @@ const loggedMenuItems = [
     listPath: '/orderHistory'
   },
   {
-    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='black' />,
+    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='white' />,
     listText: "Logout",
     listPath: '/'
 
   },
   {
-    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='black' />,
+    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='white' />,
     listText: "MAIN QUIZ",
     listPath: '/mainQuiz'
 
@@ -90,12 +90,12 @@ const notLoggedMenuItems = [
     listPath: '/signup'
   },
   {
-    listIcon: <FontAwesomeIcon icon={faSignInAlt} color='black' />,
+    listIcon: <FontAwesomeIcon icon={faSignInAlt} color='white' />,
     listText: "Login",
     listPath: '/login'
   },
   {
-    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='black' />,
+    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='white' />,
     listText: "MAIN QUIZ",
     listPath: '/mainQuiz'
 
@@ -125,7 +125,7 @@ export const Nav = () => {
           className={classes.menuSliderContainer}
           component='div'
           onClick={toggleSlider(slider, false)}>
-          <Avatar className={classes.avatar} src={avatar} alt='Rubi' />
+          <Avatar className={classes.avatar} src={avatar} alt='SPA' />
           <Divider />
 
           <List>
@@ -148,7 +148,7 @@ export const Nav = () => {
           className={classes.menuSliderContainer}
           component='div'
           onClick={toggleSlider(slider, false)}>
-          <Avatar className={classes.avatar} src={avatar} alt='Rubi' />
+          <Avatar className={classes.avatar} src={avatar} alt='SPA' />
           <Divider />
           <List>
             {notLoggedMenuItems.map((lsItem, key) => (
@@ -169,12 +169,12 @@ export const Nav = () => {
   return (
     <>
       <Box component='nav'>
-        <AppBar position='static' style={{ background: '#222' }}>
+        <AppBar position='static' style={{ background: '#6C4740' }}>
           <Toolbar>
             <IconButton onClick={toggleSlider('right', true)}>
-              <FontAwesomeIcon icon={faSpa} color='white' />
+              <FontAwesomeIcon icon={faSpa} color='#F0DAA3' />
             </IconButton>
-            <Typography variant='h5' style={{ color: '#fff' }} style={{ fontFamily: "'Ephesis', cursive" }}>
+            <Typography variant='h5' style={{ fontFamily: "'Ephesis', cursive", color:'#F0DAA3' }}>
               Belle L'JaRu Skincare
             </Typography>
             <RightMenuSlider

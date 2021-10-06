@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
 
-        <BottomNavigation width="auto" style={{ background: '#fff' }}>
+        <BottomNavigation width="auto" style={{ background: '#96BD8A' }}>
                 <IconButton href="https://github.com/jazcr/belle-ljru" target="_blank">
                     <GitHubIcon />
                 </IconButton>
