@@ -6,8 +6,36 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
+import { makeStyles } from '@material-ui/core/styles';
+import SearchIcon from '@material-ui/icons/Search';
+
+import {
+  Box,
+  Grid,
+  TextField,
+  Typography
+} from '@material-ui/core';
+
+const useStyles = makeStyles({
+  mainContainer: {
+    background: '#f8f3e5',
+      height: '100%',
+      width: '100%',
+      margin: '0px'
+  },
+  grid: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  search: {
+    paddingLeft: '3rem',
+    textAlign: 'right'
+  }
+})
 
 function ProductList() {
+
+  const classes = useStyles();
 
   const [search, setSearch ] = useState('');
 
@@ -46,28 +74,36 @@ function ProductList() {
     );
   }
 
+
+
   return (
-    <div className="my-2">
-      <h2>Our Products:</h2>
-      <input value={search} onChange={e => setSearch(e.target.value)} />
+    <Box component='div' spacing={2} className={classes.mainContainer}>
+    <Box component='div' className={classes.search}>
+      <TextField id="standard-basic" label="Search Item" variant="standard" value={search} onChange={e => setSearch(e.target.value)} 
+      />
+      <SearchIcon style={{ display:'inline' }} />
+      </Box>
       {state.products.length ? (
-        <div className="flex-row">
+        <Grid container className={classes.grid}>
           {filterProducts().filter(product => product.name.toLowerCase().includes(search.toLowerCase())).map((product) => (
+            <Grid item xs={12} sm={8} md={4}>
             <ProductItem
               key={product._id}
               _id={product._id}
               image={product.image}
               name={product.name}
+              description={product.description}
               price={product.price}
               quantity={product.quantity}
             />
+            </Grid>
           ))}
-        </div>
+        </Grid>
       ) : (
         <h3>You haven't added any products yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
-    </div>
+    </Box>
   );
 }
 

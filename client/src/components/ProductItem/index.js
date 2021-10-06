@@ -1,11 +1,50 @@
 import React from "react";
+//import '../../index.css';
 import { Link } from "react-router-dom";
-import { pluralize } from "../../utils/helpers"
+//import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import Tooltip from '@material-ui/core/Tooltip';
+import { makeStyles } from '@material-ui/core/styles';
+//import Typed from 'react-typed';
+import {
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+  IconButton
+} from '@material-ui/core';
+
+const useStyles = makeStyles({
+  cardContainer: {
+    maxWidth: 650,
+    margin: '3rem'
+  },
+  span: {
+    fontSize: '25px',
+    color: 'black',
+    fontWeight: '500'
+  },
+  title: {
+    textAlign: 'center',
+    textDecoration: 'none',
+    color: 'black',
+    fontWeight: '700'
+  },
+  icon: {
+    fontSize: '2rem'
+  }
+})
+
+
+
 function ProductItem(item) {
+  const classes = useStyles();
   const [state, dispatch] = useStoreContext();
 
   const {
@@ -13,7 +52,8 @@ function ProductItem(item) {
     name,
     _id,
     price,
-    quantity
+    //description,
+    //quantity
   } = item;
 
   const { cart } = state
@@ -40,20 +80,35 @@ function ProductItem(item) {
   }
 
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/products/${_id}`}>
-        <img
-          alt={name}
-          src={`/images/${image}`}
-        />
-        <p>{name}</p>
-      </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+      <Card className={classes.cardContainer}>
+        <CardActionArea>
+          <Link to={`/products/${_id}`}>
+            <CardMedia>
+              <img
+                alt={name}
+                src={`/images/${image}`}
+              />
+            </CardMedia>
+            <CardContent>
+              <Typography variant='h5' className={classes.title}>{name}</Typography>
+            </CardContent>
+          </Link>
+          <Typography
+            variant='body2'
+            color='textSecondary'
+            component='p'
+            style={{ textAlign: 'right', marginRight: '1px' }}>
+            Price: <span className={classes.span}>${price}</span>
+          </Typography>
+        </CardActionArea>
+        <CardActions>
+          <IconButton onClick={addToCart}>
+            <Tooltip title='Add To Cart'>
+              <AddShoppingCartIcon className={classes.icon} />
+            </Tooltip>
+          </IconButton>
+        </CardActions>
+      </Card>
   );
 }
 
