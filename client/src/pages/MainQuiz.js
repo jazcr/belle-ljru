@@ -115,7 +115,7 @@ class MainQuiz extends Component {
 
   //Function to render the results as the results the user gets from the ids of the answers they chose
   renderResult() {
-    return <Results quizResult={this.state.result} />;
+    return <Results quizResult={this.state.result}  />;
   }
 
   //Rendering the whole quiz

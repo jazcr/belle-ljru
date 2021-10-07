@@ -24,6 +24,7 @@ const useStyles = makeStyles({
   cardContainer: {
     maxWidth: 520,
     margin: '1rem'
+
   },
   span: {
     fontSize: '25px',

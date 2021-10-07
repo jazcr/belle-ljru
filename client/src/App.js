@@ -19,6 +19,7 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import Quiz from './components/Quiz/Quiz';
+import Scroll from './components/Scroll';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -58,6 +59,7 @@ function App() {
               <Route exact path='/quiz' component={Quiz} />
               <Route component={NoMatch} />
             </Switch>
+            <Scroll showBelow={250} />
           </StoreProvider>
         </div>
       </Router>
