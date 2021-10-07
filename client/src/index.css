@@ -32,7 +32,7 @@ body{
   font-family: 'Ephesis', cursive;
 }
 
-.parallaxText {
+/* .parallaxText {
   font-family: 'Ephesis', cursive;
   background: #fff;
   left: 50%;
@@ -41,7 +41,7 @@ body{
   padding: 20px;
   transform: translate(-50%, -50%);
   z-index: 999
-}
+} */
 .fixed{
   background: url('./assets/treaturself.jpg');
   background-size: cover;
@@ -235,10 +235,6 @@ input:focus {
   justify-content: flex-end;
 }
 
-.flex-row {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .mx-1 {
   margin-right: var(--spacing-one);
