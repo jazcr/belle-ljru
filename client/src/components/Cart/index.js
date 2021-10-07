@@ -8,6 +8,9 @@ import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const stripePromise = loadStripe('pk_test_51JgHG1K26w07WHByfAHM2hrxkw41soOIIhAabUL4v1k2ZQyOhkjHdNReFaWnH0Us5r27zoqJYptMLsrickPCesBG00OZia2Ixq');
 
@@ -63,9 +66,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash">
-          🛒
-        </span>
+        <FontAwesomeIcon icon={faShoppingBag} color='#F0DAA3' />
       </div>
     );
   }

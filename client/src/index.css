@@ -82,6 +82,11 @@ body{
   
 }
 
+/*Cart Item*/
+.cartItem{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* :root {
   --primary: #232F3E;
@@ -220,10 +225,7 @@ input:focus {
   margin-right: auto;
 }
 
-.flex-row {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 .space-between {
   justify-content: space-between;
@@ -231,6 +233,11 @@ input:focus {
 
 .flex-end {
   justify-content: flex-end;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .mx-1 {
