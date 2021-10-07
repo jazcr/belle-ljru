@@ -23,7 +23,7 @@ import {
 const useStyles = makeStyles({
   cardContainer: {
     maxWidth: 650,
-    margin: '3rem'
+    //margin: '3rem'
   },
   span: {
     fontSize: '25px',
