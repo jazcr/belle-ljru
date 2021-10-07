@@ -8,17 +8,20 @@ const useStyles = makeStyles(theme => ({
     cardContainer: {
         backgroundColor: 'rgb(230, 224, 215)',
         color:'black',
-        boxShadow: '0 15px 20px #7DC8D0, 0 15px 12px rgba(0,0,0,0.22)',
+        boxShadow: '0 15px 20px #E5BEDE, 0 15px 12px rgba(0,0,0,0.22)',
         borderRadius: '15%'
     },
     title: {
         fontSize: '200%',
         textAlign: 'center',
-        marginTop:'5px'
+        marginTop:'5px',
+        fontFamily: 'Ephesis',
+        fontWeight: 'bold'
     },
     content: {
         fontSize: '100%',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: 'cursive'
     }
 
 }));
