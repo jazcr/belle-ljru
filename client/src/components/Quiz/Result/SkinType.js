@@ -15,6 +15,7 @@ class SkinTypes extends Component {
         this.onOilyDefClick = this.onOilyDefClick.bind(this)
         this.onDryDefClick = this.onDryDefClick.bind(this)
         this.onComboDefClick = this.onComboDefClick.bind(this)
+        
     }
 
 //Title and content that will be rendered for the Oily card
@@ -29,6 +30,7 @@ class SkinTypes extends Component {
                 oil-free moisturizers/SPF are going to be your best 
                 friend!!`}
                 //Back button
+                button
                 onBackClick={this.onOilyDefClick}
             />
         )
@@ -36,13 +38,16 @@ class SkinTypes extends Component {
 //Title and content that will be rendered for the Dry skin card
     renderDryDef() {
         return (
+            <>
             <DryDef
                 title={'🌺 Dry Skin 🌺'}
                 content={`Those with dry skin normally do not produce enough oil in their skin
             causing tight, dry skin and flakiness throughout the day. Dry skin users want to look for 
             hydrating cleansers, gentle alcohol-free toners and super moisturizing serums/SPF.`}
-                onBackClick={this.onDryDefClick}
+            button   
+            onBackClick={this.onDryDefClick}
             />
+            </>
         )
     }
 
@@ -55,7 +60,8 @@ class SkinTypes extends Component {
             enough oil to keep your skin moisturized but not too much to build up and cause 
             breakouts! While combo/normal skin can pretty much get away with using anything,
             gentle cleansers, hydrating sermums/toners and a really good moisturizer/SPF is recommended.`}
-                onBackClick={this.onComboDefClick}
+            button
+            onBackClick={this.onComboDefClick}
             />
         )
     }
@@ -98,17 +104,17 @@ class SkinTypes extends Component {
             </div>
         )
     }
-//On click show the oily card, set the state to shown if not already
+//On click show the oily card
     onOilyDefClick() {
         let showOily = this.state.showOily
         this.setState({ showOily: !showOily })
     }
-//On click show the dry card, set the state to shown if not already
+//On click show the dry card
     onDryDefClick() {
         let showDry = this.state.showDry
         this.setState({ showDry: !showDry })
     }
-//On click show the combo/normal card, set the state to shown if not already
+//On click show the combo/normal card
     onComboDefClick() {
         let showCombo = this.state.showCombo
         this.setState({ showCombo: !showCombo })
