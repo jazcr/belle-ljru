@@ -1,13 +1,13 @@
 /*Styling for the main quiz*/
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: cursive;
   box-sizing: border-box;
 
 }
 
  body {
- /* background-image: url(../assets/flower.jpg);*/
+  background-image: url(../assets/flowersandrock.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
  }
