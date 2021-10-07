@@ -10,7 +10,7 @@ db.once('open', async () => {
         { name: 'Serums' },
         { name: 'Moisturizers' },
         { name: 'Face Oils' },
-        { name: 'Sunscreen' },
+        { name: 'Sunscreen' }
 
     ]);
 

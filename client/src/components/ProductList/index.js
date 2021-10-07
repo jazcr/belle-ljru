@@ -86,7 +86,7 @@ function ProductList() {
       {state.products.length ? (
         <Grid container className={classes.grid}>
           {filterProducts().filter(product => product.name.toLowerCase().includes(search.toLowerCase())).map((product) => (
-            <Grid item xs={12} sm={8} md={4}>
+            <Grid item xs={12} sm={8} md={6}>
             <ProductItem
               key={product._id}
               _id={product._id}
