@@ -56,12 +56,11 @@ const CartItem = ({ item }) => {
       </Box>
       <Box component='div'>
         <Box component='div'>{item.name}, ${item.price}</Box>
-        <Box component='div'>
+        <Box component='div' style={{ textAlign:'right', alignItems: 'right'}}>
           <span>Qty:</span>
           <TextField 
-            id="standard-basic" 
-            label="Search Item" 
-            variant="standard"
+            id="outlined-basic" 
+            variant="outlined"
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
