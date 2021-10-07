@@ -44,6 +44,8 @@ body{
 }
 .fixed{
   background: url('./assets/treaturself.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   padding: 0px 0px;
   position: fixed;
