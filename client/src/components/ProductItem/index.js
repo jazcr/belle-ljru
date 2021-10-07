@@ -22,8 +22,9 @@ import {
 
 const useStyles = makeStyles({
   cardContainer: {
-    maxWidth: 650,
-    margin: '3rem'
+    maxWidth: 520,
+    margin: '1rem'
+
   },
   span: {
     fontSize: '1.25rem',
@@ -38,7 +39,8 @@ const useStyles = makeStyles({
   },
   icon: {
     fontSize: '2rem'
-  }
+  },
+ 
 })
 
 
@@ -87,6 +89,7 @@ function ProductItem(item) {
               <img
                 alt={name}
                 src={`/images/${image}`}
+                style={{ alignItems: 'center'}}
               />
             </CardMedia>
             <CardContent>

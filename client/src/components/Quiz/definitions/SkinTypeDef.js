@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Card, CardContent, Button, Typography} from '@material-ui/core';
+import { Box, Grid, Card, CardContent, Button, Typography, Link } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core";
 //import BackButton from "../BackButton";
 
@@ -7,32 +7,37 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     cardContainer: {
         backgroundColor: 'rgb(230, 224, 215)',
-        color:'black',
-        boxShadow: '0 15px 20px #7DC8D0, 0 15px 12px rgba(0,0,0,0.22)',
+        color: 'black',
+        boxShadow: '0 15px 20px #E5BEDE, 0 15px 12px rgba(0,0,0,0.22)',
         borderRadius: '15%'
     },
     title: {
         fontSize: '200%',
         textAlign: 'center',
-        marginTop:'5px'
+        marginTop: '5px',
+        fontFamily: 'Ephesis',
+        fontWeight: 'bold'
     },
     content: {
         fontSize: '100%',
-        textAlign: 'center'
-    }
-
+        textAlign: 'center',
+        fontFamily: 'cursive'
+    },
 }));
 
 //Creating info cards with the title and content so users can read more about the different skin types
 //Oily skin card
-const OilyDef = ({title, content, onBackClick }) => {
+const OilyDef = ({ title, content, onBackClick, button }) => {
     const classes = useStyles();
     return (
         <div className={classes.oily}>
             <Card className={classes.cardContainer}>
                 <CardContent>
-                    <Typography className={classes.title} style={{fontSize:'200%', textAlign:'center'}}> {title} </Typography>
-                  <br />
+                    <Button onClick={onBackClick}>
+                        <Link style={{ color: 'black' }} to='/results'>Back</Link>  {button}
+                    </Button>
+                    <Typography className={classes.title} style={{ fontSize: '200%', textAlign: 'center' }}> {title} </Typography>
+                    <br />
                     <Typography className={classes.content}> {content} </Typography>
                 </CardContent>
             </Card>
@@ -41,13 +46,19 @@ const OilyDef = ({title, content, onBackClick }) => {
 }
 
 //Dry skin card
-const DryDef = ({title, content, onBackClick }) => {
+const DryDef = ({ title, content, onBackClick, button }) => {
     const classes = useStyles();
     return (
         <div className={classes.oily}>
             <Card className={classes.cardContainer}>
                 <CardContent>
+                    <Button onClick={onBackClick}>
+                        <Link style={{ color: 'black' }} to='/results'>Back</Link>  {button}
+                    </Button>
                     <Typography className={classes.title}> {title} </Typography>
+                    <div className="close" onClick={onBackClick}>
+                        <i className="fa fa-times" aria-hidden="true" />
+                    </div>
                     <br />
                     <Typography className={classes.content}> {content} </Typography>
                 </CardContent>
@@ -57,12 +68,15 @@ const DryDef = ({title, content, onBackClick }) => {
 }
 
 //Combo/normal skin card
-const ComboDef = ({title, content, onBackClick }) => {
+const ComboDef = ({ title, content, onBackClick, button }) => {
     const classes = useStyles();
     return (
         <div className={classes.oily}>
             <Card className={classes.cardContainer}>
                 <CardContent>
+                    <Button onClick={onBackClick}>
+                        <Link style={{ color: 'black' }} to='/results'>Back</Link>  {button}
+                    </Button>
                     <Typography className={classes.title}> {title} </Typography>
                     <br />
                     <Typography className={classes.content}> {content} </Typography>

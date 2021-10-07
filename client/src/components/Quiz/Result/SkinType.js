@@ -15,13 +15,14 @@ class SkinTypes extends Component {
         this.onOilyDefClick = this.onOilyDefClick.bind(this)
         this.onDryDefClick = this.onDryDefClick.bind(this)
         this.onComboDefClick = this.onComboDefClick.bind(this)
+        
     }
 
 //Title and content that will be rendered for the Oily card
     renderOilyDef() {
         return (
             <OilyDef
-                title={'Oily Skin'}
+                title={'🌸 Oily Skin 🌸'}
                 content={`Those with oily skin normally 
                 produce too much oil causing bad breakouts 
                 and shinyness throughout the day! Oil control 
@@ -29,6 +30,7 @@ class SkinTypes extends Component {
                 oil-free moisturizers/SPF are going to be your best 
                 friend!!`}
                 //Back button
+                button
                 onBackClick={this.onOilyDefClick}
             />
         )
@@ -36,13 +38,16 @@ class SkinTypes extends Component {
 //Title and content that will be rendered for the Dry skin card
     renderDryDef() {
         return (
+            <>
             <DryDef
-                title={'Dry Skin'}
+                title={'🌺 Dry Skin 🌺'}
                 content={`Those with dry skin normally do not produce enough oil in their skin
             causing tight, dry skin and flakiness throughout the day. Dry skin users want to look for 
             hydrating cleansers, gentle alcohol-free toners and super moisturizing serums/SPF.`}
-                onBackClick={this.onDryDefClick}
+            button   
+            onBackClick={this.onDryDefClick}
             />
+            </>
         )
     }
 
@@ -50,12 +55,13 @@ class SkinTypes extends Component {
     renderComboDef() {
         return (
             <ComboDef
-                title={'Combination/Normal Skin'}
+                title={'🏵️ Combination/Normal Skin 🏵️'}
                 content={`Those with combination/normal skin have the best of both worlds;
             enough oil to keep your skin moisturized but not too much to build up and cause 
             breakouts! While combo/normal skin can pretty much get away with using anything,
             gentle cleansers, hydrating sermums/toners and a really good moisturizer/SPF is recommended.`}
-                onBackClick={this.onComboDefClick}
+            button
+            onBackClick={this.onComboDefClick}
             />
         )
     }
@@ -77,38 +83,38 @@ class SkinTypes extends Component {
         return (
             <div>
                 {/*The users results */}
-                <Typography variant='h4' style={{ textAlign: 'center' }}>You have <span style={{ color: '#AB90D0', variant: 'h3', fontWeight: 'bold' }}>{this.props.result}</span> skin!</Typography>
+                <Typography variant='h4' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }}>You have <span style={{ color: '#96BD8A', variant: 'h3', fontWeight: 'bold' }}>{this.props.result}</span> skin!</Typography>
                 <br />
                 {/*The list to render the info cards about the different skin types */}
                 <List>
                     {/*When user clicks this text the oily card will render */}
                     <ListItem onClick={this.onOilyDefClick}>
-                        <ListItemText> Learn more about <span style={{ color: '#AB90D0', fontWeight: 'bold' }}> Oily</span> skin </ListItemText>
+                        <ListItemText> Learn more about <span style={{ color: '#96BD8A', fontWeight: 'bold' }}> Oily</span> skin </ListItemText>
                     </ListItem>
                      {/*When user clicks this text the dry card will render */}
                     <ListItem onClick={this.onDryDefClick}>
-                        <ListItemText> Learn more about <span style={{ color: '#AB90D0', fontWeight: 'bold' }}> Dry</span> skin </ListItemText>
+                        <ListItemText> Learn more about <span style={{ color: '#96BD8A', fontWeight: 'bold' }}> Dry</span> skin </ListItemText>
                     </ListItem>
                      {/*When user clicks this text the combo/normal card will render */}
                     <ListItem onClick={this.onComboDefClick}>
-                        <ListItemText> Learn more about <span style={{ color: '#AB90D0', fontWeight: 'bold' }}> Combination/Normal</span> skin </ListItemText>
+                        <ListItemText> Learn more about <span style={{ color: '#96BD8A', fontWeight: 'bold' }}> Combination/Normal</span> skin </ListItemText>
                     </ListItem>
                 </List>
 
             </div>
         )
     }
-//On click show the oily card, set the state to shown if not already
+//On click show the oily card
     onOilyDefClick() {
         let showOily = this.state.showOily
         this.setState({ showOily: !showOily })
     }
-//On click show the dry card, set the state to shown if not already
+//On click show the dry card
     onDryDefClick() {
         let showDry = this.state.showDry
         this.setState({ showDry: !showDry })
     }
-//On click show the combo/normal card, set the state to shown if not already
+//On click show the combo/normal card
     onComboDefClick() {
         let showCombo = this.state.showCombo
         this.setState({ showCombo: !showCombo })
