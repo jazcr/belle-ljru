@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     margin: '1rem'
   },
   span: {
-    fontSize: '25px',
+    fontSize: '1.25rem',
     color: 'black',
     fontWeight: '500'
   },
@@ -39,7 +39,8 @@ const useStyles = makeStyles({
   },
   icon: {
     fontSize: '2rem'
-  }
+  },
+ 
 })
 
 
@@ -83,7 +84,7 @@ function ProductItem(item) {
   return (
       <Card className={classes.cardContainer}>
         <CardActionArea>
-          <Link to={`/products/${_id}`}>
+          <Link to={`/products/${_id}`} style={{ textDecoration: 'none' }}>
             <CardMedia>
               <img
                 alt={name}
