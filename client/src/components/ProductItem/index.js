@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     margin: '3rem'
   },
   span: {
-    fontSize: '25px',
+    fontSize: '1.25rem',
     color: 'black',
     fontWeight: '500'
   },
@@ -82,7 +82,7 @@ function ProductItem(item) {
   return (
       <Card className={classes.cardContainer}>
         <CardActionArea>
-          <Link to={`/products/${_id}`}>
+          <Link to={`/products/${_id}`} style={{ textDecoration: 'none' }}>
             <CardMedia>
               <img
                 alt={name}
@@ -90,7 +90,7 @@ function ProductItem(item) {
               />
             </CardMedia>
             <CardContent>
-              <Typography variant='h5' className={classes.title}>{name}</Typography>
+              <Typography variant='h6' className={classes.title}>{name}</Typography>
             </CardContent>
           </Link>
           <Typography
