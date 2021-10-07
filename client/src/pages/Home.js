@@ -53,7 +53,7 @@ const Home = () => {
         <Parallax speed={45}>
           <div className="bg1 rellax"></div>
           <div style={{ height: 700 }}>
-            <h1 className='parallaxText'> Belle L'JaRu Skincare</h1>
+            <h1 className='parallaxText'></h1>
           </div>
         </Parallax>
 
