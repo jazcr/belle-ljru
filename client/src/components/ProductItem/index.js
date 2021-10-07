@@ -39,7 +39,8 @@ const useStyles = makeStyles({
   },
   icon: {
     fontSize: '2rem'
-  }
+  },
+ 
 })
 
 
