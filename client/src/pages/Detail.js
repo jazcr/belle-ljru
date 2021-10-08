@@ -32,7 +32,7 @@ const useStyles = makeStyles({
 })
 
 
-function Detail() {
+const Detail= () => {
 
   const classes = useStyles();
 
@@ -116,10 +116,10 @@ function Detail() {
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
-            style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '20%' }}
+            style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}
           />
           <Box component="p" style={{ textAlign: 'center'}}>
-            <strong>Price:</strong>${currentProduct.price}{' '}
+          Price:<span style={{ fontWeight:'600', paddingLeft: '1rem'}}>${currentProduct.price}{' '}</span>
             <IconButton onClick={addToCart}>
               <Tooltip title='Add To Cart'>
                 <AddShoppingCartIcon className={classes.icon} />
