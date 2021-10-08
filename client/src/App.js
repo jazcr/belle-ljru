@@ -21,6 +21,7 @@ import OrderHistory from './pages/OrderHistory';
 import Quiz from './components/Quiz/Quiz';
 import Scroll from './components/Scroll';
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });

@@ -1,4 +1,4 @@
-import { Typography, List, ListItem, ListItemText } from "@material-ui/core";
+import { Typography, List, ListItem, ListItemText, Button, Link } from "@material-ui/core";
 import React, { Component } from "react";
 import { DryDef, OilyDef, ComboDef } from "../definitions/SkinTypeDef";
 
@@ -22,7 +22,7 @@ class SkinTypes extends Component {
     renderOilyDef() {
         return (
             <OilyDef
-                title={'🌸 Oily Skin 🌸'}
+                title={' Oily Skin '}
                 content={`Those with oily skin normally 
                 produce too much oil causing bad breakouts 
                 and shinyness throughout the day! Oil control 
@@ -40,7 +40,7 @@ class SkinTypes extends Component {
         return (
             <>
             <DryDef
-                title={'🌺 Dry Skin 🌺'}
+                title={' Dry Skin '}
                 content={`Those with dry skin normally do not produce enough oil in their skin
             causing tight, dry skin and flakiness throughout the day. Dry skin users want to look for 
             hydrating cleansers, gentle alcohol-free toners and super moisturizing serums/SPF.`}
@@ -55,7 +55,7 @@ class SkinTypes extends Component {
     renderComboDef() {
         return (
             <ComboDef
-                title={'🏵️ Combination/Normal Skin 🏵️'}
+                title={' Combination/Normal Skin '}
                 content={`Those with combination/normal skin have the best of both worlds;
             enough oil to keep your skin moisturized but not too much to build up and cause 
             breakouts! While combo/normal skin can pretty much get away with using anything,

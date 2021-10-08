@@ -3,7 +3,9 @@ import Parallax from 'react-rellax';
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
-import '../index.css'
+import '../index.css';
+import HomeFooter from '../components/HomeFooter';
+
 
 
 
@@ -40,6 +42,8 @@ const Home = () => {
         <ProductList />
         <Cart />
       </div>
+      <br /><br /><br /><br /><br /><br />
+      <HomeFooter />
     </>
   );
 };
