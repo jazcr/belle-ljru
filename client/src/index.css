@@ -32,7 +32,7 @@ body{
   font-family: 'Ephesis', cursive;
 }
 
-.parallaxText {
+/* .parallaxText {
   font-family: 'Ephesis', cursive;
   background: #fff;
   left: 50%;
@@ -41,9 +41,11 @@ body{
   padding: 20px;
   transform: translate(-50%, -50%);
   z-index: 999
-}
+} */
 .fixed{
   background: url('./assets/treaturself.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   padding: 0px 0px;
   position: fixed;
@@ -80,6 +82,11 @@ body{
   
 }
 
+/*Cart Item*/
+.cartItem{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* :root {
   --primary: #232F3E;
@@ -218,10 +225,7 @@ input:focus {
   margin-right: auto;
 }
 
-.flex-row {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 .space-between {
   justify-content: space-between;
@@ -230,6 +234,7 @@ input:focus {
 .flex-end {
   justify-content: flex-end;
 }
+
 
 .mx-1 {
   margin-right: var(--spacing-one);

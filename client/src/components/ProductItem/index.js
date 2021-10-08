@@ -10,6 +10,7 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Tooltip from '@material-ui/core/Tooltip';
 import { makeStyles } from '@material-ui/core/styles';
 //import Typed from 'react-typed';
+
 import {
   Card,
   CardActionArea,
@@ -22,11 +23,11 @@ import {
 
 const useStyles = makeStyles({
   cardContainer: {
-    maxWidth: 650,
-    //margin: '3rem'
+    maxWidth: 520,
+    margin: '3rem'
   },
   span: {
-    fontSize: '25px',
+    fontSize: '1.25rem',
     color: 'black',
     fontWeight: '500'
   },
@@ -39,7 +40,6 @@ const useStyles = makeStyles({
   icon: {
     fontSize: '2rem'
   },
- 
 })
 
 
@@ -83,15 +83,16 @@ function ProductItem(item) {
   return (
       <Card className={classes.cardContainer}>
         <CardActionArea>
-          <Link to={`/products/${_id}`}>
+          <Link to={`/products/${_id}`} style={{ textDecoration: 'none' }}>
             <CardMedia>
               <img
                 alt={name}
                 src={`/images/${image}`}
+                style={{ alignItems: 'center'}}
               />
             </CardMedia>
             <CardContent>
-              <Typography variant='h5' className={classes.title}>{name}</Typography>
+              <Typography variant='h6' className={classes.title}>{name}</Typography>
             </CardContent>
           </Link>
           <Typography

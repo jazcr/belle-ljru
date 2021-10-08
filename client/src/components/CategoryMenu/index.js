@@ -10,6 +10,7 @@ import { idbPromise } from '../../utils/helpers';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Typography,
+  Link,
   IconButton
 } from '@material-ui/core';
 
@@ -74,6 +75,11 @@ function CategoryMenu() {
           {item.name}
         </IconButton>
       ))}
+      <IconButton className={classes.btn}>
+          <Link style={{ textDecoration:'none', color:'#666'}} href="/">
+            All
+          </Link>
+        </IconButton>
     </>
   );
 }

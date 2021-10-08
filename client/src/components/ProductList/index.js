@@ -12,8 +12,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import {
   Box,
   Grid,
-  TextField,
-  Typography
+  TextField
 } from '@material-ui/core';
 
 const useStyles = makeStyles({
