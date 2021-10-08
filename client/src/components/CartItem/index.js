@@ -3,6 +3,16 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import {
+  TextField,
+  Box
+} from '@material-ui/core';
+
+//CSS Styles  
+
 const CartItem = ({ item }) => {
 
   const [, dispatch] = useStoreContext();
@@ -37,18 +47,20 @@ const CartItem = ({ item }) => {
   }
 
   return (
-    <div className="flex-row">
-      <div>
+    <Box component='div' className="cartItem">
+      <Box component='div'>
         <img
           src={`/images/${item.image}`}
           alt=""
         />
-      </div>
-      <div>
-        <div>{item.name}, ${item.price}</div>
-        <div>
+      </Box>
+      <Box component='div'>
+        <Box component='div'>{item.name}, ${item.price}</Box>
+        <Box component='div' style={{ textAlign:'right', alignItems: 'right'}}>
           <span>Qty:</span>
-          <input
+          <TextField 
+            id="outlined-basic" 
+            variant="outlined"
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
@@ -59,11 +71,11 @@ const CartItem = ({ item }) => {
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            🗑️
+            <FontAwesomeIcon icon={faTrashAlt} color='#6C4740' />
           </span>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
