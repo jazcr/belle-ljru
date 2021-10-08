@@ -66,7 +66,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <FontAwesomeIcon icon={faShoppingBag} color='#F0DAA3' />
+        <FontAwesomeIcon icon={faShoppingBag} color='#e9cb81' />
       </div>
     );
   }

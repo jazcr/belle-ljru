@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-
+import '../index.css';
 import Cart from '../components/Cart';
 import { useStoreContext } from '../utils/GlobalState';
 import {
@@ -13,9 +13,31 @@ import {
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Tooltip from '@material-ui/core/Tooltip';
+import { makeStyles } from '@material-ui/core/styles';
+import {
+  Divider,
+  Typography,
+  Box,
+  IconButton,
+} from '@material-ui/core';
+
+const useStyles = makeStyles({
+  icon: {
+    fontSize: '2rem'
+  },
+})
+
 
 function Detail() {
+
+  const classes = useStyles();
+
   const [state, dispatch] = useStoreContext();
+
   const { id } = useParams();
 
   const [currentProduct, setCurrentProduct] = useState({});
@@ -25,7 +47,7 @@ function Detail() {
   const { products, cart } = state;
 
   useEffect(() => {
-  
+
     if (products.length) {
       setCurrentProduct(products.find((product) => product._id === id));
     }
@@ -40,7 +62,7 @@ function Detail() {
         idbPromise('products', 'put', product);
       });
     }
-    
+
     else if (!loading) {
       idbPromise('products', 'get').then((indexedProducts) => {
         dispatch({
@@ -84,28 +106,36 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+        <Box component="div" className="container my-1">
+          <Link to="/" style={{ textDecoration: 'none', fontSize:'1rem', color: '#666', fontWeight: '600', paddingTop:'2rem'}}>← Back to Products</Link>
 
-          <h2>{currentProduct.name}</h2>
+          <Typography variant='h3' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }} >{currentProduct.name}</Typography>
+          <Divider />
 
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
+          <Box component="p" style={{ textAlign: 'center', paddingTop: '2rem', paddingBottom: '2rem' }}>{currentProduct.description}</Box>
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
+            style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '20%' }}
           />
-        </div>
+          <Box component="p" style={{ textAlign: 'center'}}>
+            <strong>Price:</strong>${currentProduct.price}{' '}
+            <IconButton onClick={addToCart}>
+              <Tooltip title='Add To Cart'>
+                <AddShoppingCartIcon className={classes.icon} />
+              </Tooltip>
+            </IconButton>
+            <IconButton
+              disabled={!cart.find((p) => p._id === currentProduct._id)}
+              onClick={removeFromCart}
+            >
+              <Tooltip title='Remove From Cart'>
+                <RemoveShoppingCartIcon className={classes.icon} />
+              </Tooltip>
+            </IconButton>
+
+          </Box>
+        </Box>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />
