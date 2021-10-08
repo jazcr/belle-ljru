@@ -1,18 +1,16 @@
 import React from "react";
-import Jumbotron from "../components/Jumbotron";
+import '../index.css';
+
+import {
+  Typography,
+  Box,
+} from '@material-ui/core';
 
 const NoMatch = () => {
   return (
-    <div>
-      <Jumbotron>
-        <h1>404 Page Not Found</h1>
-        <h1>
-          <span role="img" aria-label="Face With Rolling Eyes Emoji">
-            🙄
-          </span>
-        </h1>
-      </Jumbotron>
-    </div>
+    <Box component='div'>
+        <Typography className='error' variant='h3' style={{ fontFamily: "'Ephesis', cursive" , textAlign: 'center', paddingTop:'15rem', paddingLeft: '25rem'}}>Oh uh...404 Page Not Found</Typography>
+    </Box>
   );
 };
 
