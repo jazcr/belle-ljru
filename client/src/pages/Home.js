@@ -7,8 +7,6 @@ import '../index.css';
 import HomeFooter from '../components/HomeFooter';
 
 
-
-
 const Home = () => {
   return (
     <>
