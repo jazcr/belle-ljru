@@ -11,7 +11,7 @@ db.once('open', async () => {
         { name: 'Moisturizers' },
         { name: 'Face Oils' },
         { name: 'Sunscreen' },
-        { name: 'All'},
+        { name: 'Oily '}
 
     ]);
 
@@ -25,13 +25,13 @@ db.once('open', async () => {
             description:
                 'This gentle cleanser with a natural rose scent is MUST in your daily routine.',
             image: 'test_image.jpg',
-            category: categories[0]._id,
+            category: categories[0]._id, 
             price: 10.99,
             quantity: 500
         },
         {
             name: 'Deep Clean Cleansing Gel',
-            category: categories[0]._id,
+            category: categories[0, 6]._id,
             description:
                 'Give your pores a proper cleansing with our Deep Clean Cleansing Gel.',
             image: 'test_image.jpg',

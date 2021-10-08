@@ -12,8 +12,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import {
   Box,
   Grid,
-  TextField,
-  Typography
+  TextField
 } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -86,7 +85,7 @@ function ProductList() {
       {state.products.length ? (
         <Grid container className={classes.grid}>
           {filterProducts().filter(product => product.name.toLowerCase().includes(search.toLowerCase())).map((product) => (
-            <Grid item xs={12} sm={8} md={6}>
+            <Grid item xs={12} sm={8} md={4}>
             <ProductItem
               key={product._id}
               _id={product._id}

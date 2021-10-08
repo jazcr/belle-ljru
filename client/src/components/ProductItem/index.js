@@ -10,6 +10,7 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Tooltip from '@material-ui/core/Tooltip';
 import { makeStyles } from '@material-ui/core/styles';
 //import Typed from 'react-typed';
+
 import {
   Card,
   CardActionArea,
@@ -23,8 +24,7 @@ import {
 const useStyles = makeStyles({
   cardContainer: {
     maxWidth: 520,
-    margin: '1rem'
-
+    margin: '3rem'
   },
   span: {
     fontSize: '1.25rem',
@@ -40,7 +40,6 @@ const useStyles = makeStyles({
   icon: {
     fontSize: '2rem'
   },
- 
 })
 
 

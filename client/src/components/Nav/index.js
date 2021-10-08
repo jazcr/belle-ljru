@@ -4,7 +4,7 @@ import '../../index.css';
 import Auth from "../../utils/auth";
 import avatar from "../../assets/avatar.png";
 import Footer from '../Footer';
-import { faSpa, faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSpa, faSignInAlt, faSignOutAlt, faPenSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Link } from "react-router-dom";
@@ -70,8 +70,8 @@ const loggedMenuItems = [
 
   },
   {
-    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='white' />,
-    listText: "MAIN QUIZ",
+    listIcon: <FontAwesomeIcon icon={faPenSquare} color='white' />,
+    listText: "Skin Type Quiz",
     listPath: '/mainQuiz'
 
   }
@@ -95,8 +95,8 @@ const notLoggedMenuItems = [
     listPath: '/login'
   },
   {
-    listIcon: <FontAwesomeIcon icon={faSignOutAlt} color='white' />,
-    listText: "MAIN QUIZ",
+    listIcon: <FontAwesomeIcon icon={faPenSquare} color='white' />,
+    listText: "Skin Type Quiz",
     listPath: '/mainQuiz'
 
   }
