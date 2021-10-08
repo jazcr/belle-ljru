@@ -3,7 +3,8 @@ import Parallax from 'react-rellax';
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
-import '../index.css'
+import '../index.css';
+import HomeFooter from '../components/HomeFooter';
 
 import { makeStyles } from '@material-ui/core/styles';
 //import Typed from 'react-typed';
@@ -35,6 +36,9 @@ const useStyles = makeStyles({
   cardContainer: {
     maxWidth: 650,
     margin: '3rem'
+  },
+  footer: {
+    backgroundColor: '#6C4740'
   }
 })
 
@@ -73,6 +77,8 @@ const Home = () => {
         <ProductList />
         <Cart />
       </div>
+      <br /><br /><br /><br /><br /><br />
+      <HomeFooter />
     </>
   );
 };

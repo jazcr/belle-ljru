@@ -11,6 +11,7 @@ db.once('open', async () => {
         { name: 'Moisturizers' },
         { name: 'Face Oils' },
         { name: 'Sunscreen' },
+        { name: 'Oily '}
 
     ]);
 
@@ -30,7 +31,7 @@ db.once('open', async () => {
         },
         {
             name: 'Deep Clean Cleansing Gel',
-            category: categories[0]._id,
+            category: categories[0, 6]._id,
             description:
                 'Give your pores a proper cleansing with our Deep Clean Cleansing Gel.',
             image: 'deep_cleanse.jpg',
