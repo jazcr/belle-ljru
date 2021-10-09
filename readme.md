@@ -10,6 +10,7 @@
 - [View](#view)
 - [Installation](#installation)
 - [Built With](#builtwith)
+- [Creators](#creators)
 - [Credits](#credits)
 - [License](#license)
 
@@ -29,6 +30,11 @@ Welcome to **Belle L'JaRu**, the best skincare e-commerce store around! This MER
 - [MongoDB](https://www.mongodb.com/)- A popular NoSQL database management program.
 - [GraphQL](https://graphql.org/) - A query language for APIs.
 - [Stripe](https://stripe.com/docs/stripe-js) - A JavaScript library for taking payments
+
+## Creators
+- Rubi Rubio-https://github.com/rubiocode
+- Jasmine Rudolph- https://github.com/jazcr
+- Loryn Haykus - https://github.com/lhaykus
 
 ## Credits
 - React Multiple Choice Quiz [tutorial](https://mitchgavan.com/react-quiz/)
