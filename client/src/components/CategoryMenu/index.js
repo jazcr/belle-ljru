@@ -22,7 +22,8 @@ const useStyles = makeStyles({
       fontFamily: "'Ephesis', cursive"
   },
   btn: {
-    paddingBottom: '4rem'    
+    paddingBottom: '5%',
+    fontSize: '1.25rem'    
   }
 })
 
