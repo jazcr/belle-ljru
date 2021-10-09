@@ -88,7 +88,7 @@ function ProductItem(item) {
               <img
                 alt={name}
                 src={`/images/${image}`}
-                style={{ alignItems: 'center'}}
+                style={{ alignItems: 'center', justifyContent: 'center', maxHeight: 'auto', width: '100%'}}
               />
             </CardMedia>
             <CardContent>
