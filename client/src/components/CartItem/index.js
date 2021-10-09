@@ -59,19 +59,20 @@ const CartItem = ({ item }) => {
         <Box component='div' style={{ textAlign:'right', alignItems: 'right'}}>
           <span>Qty:</span>
           <TextField 
-            id="outlined-basic" 
+            id="outlined-basic"
             variant="outlined"
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
             onChange={onChange}
+            style={{ width: "30px", height: "auto"}}
           />
           <span
             role="img"
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            <FontAwesomeIcon icon={faTrashAlt} color='#6C4740' />
+            <FontAwesomeIcon icon={faTrashAlt} color='#F0DAA3' />
           </span>
         </Box>
       </Box>
