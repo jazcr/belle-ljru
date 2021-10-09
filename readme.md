@@ -12,6 +12,7 @@
 - [Built With](#builtwith)
 - [Creators](#creators)
 - [Credits](#credits)
+- [Contributors](#contributors)
 - [License](#license)
 
 # Description
@@ -39,5 +40,15 @@ Welcome to **Belle L'JaRu**, the best skincare e-commerce store around! This MER
 ## Credits
 - React Multiple Choice Quiz [tutorial](https://mitchgavan.com/react-quiz/)
 - Reference for routine [cards](https://github.com/irfanabliz/personality-test-react)
+
+
+## Contributors
+
+[Jasmine Rudolph](https://github.com/jazcr)
+
+[Loryn Haykus](https://github.com/lhaykus)
+
+[Rubidia Rubio](https://github.com/rubiocode)
+
 
 ## License
