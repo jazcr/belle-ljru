@@ -54,7 +54,7 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/mainQuiz" component={MainQuiz} />
               <Route exact path="/signup" component={Signup} />
-              <Route path="/success" component={Success} />
+              <Route exact path="/success" component={Success} />
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/products/:id" component={Detail} />
               <Route exact path='/quiz' component={Quiz} />
