@@ -14,7 +14,7 @@
 - [License](#license)
 
 # Description
-Welcome to **Belle L'JaRu**, the best skincare e-commerce store around! This MERN full-stack application allows users to shop best-selling, top-grade skincare products, create personal accounts, save purchase history and buy products using Stripe! Our personalized mutliple choice quiz allows users to find out what skin type they may have and gives a recommended routine with products for users to follow! Our motto is to love the skin and our goal is to make everyone feel beautiful and confident in their own skin!
+Welcome to **Belle L'JaRu**, the best skincare e-commerce store around! This MERN full-stack application allows users to shop best-selling, top-grade skincare products, create personal accounts, save purchase history and buy products using Stripe! Our personalized mutliple choice quiz allows users to find out what skin type they may have and gives a recommended routine with products for users to follow! Our motto is to love the skin you're in and our goal is to make everyone feel beautiful and confident in their own skin!
 
 
 ## View
