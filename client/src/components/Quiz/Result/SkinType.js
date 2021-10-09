@@ -81,15 +81,12 @@ class SkinTypes extends Component {
             return this.renderComboDef()
         }
         return (
-            <div styles={{background: '#f8f3e5',
-            height: '100%',
-            width: '100%',
-            margin: '0px'}}>
+            <div style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', float: 'right', paddingRight: '20%', paddingTop:'8%', fontSize: '1.5rem'}}>
                 {/*The users results */}
                 <Typography variant='h4' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }}>You have <span style={{ color: '#96BD8A', variant: 'h3', fontWeight: 'bold' }}>{this.props.result}</span> skin!</Typography>
                 <br />
                 {/*The list to render the info cards about the different skin types */}
-                <List>
+                <List >
                     {/*When user clicks this text the oily card will render */}
                     <ListItem onClick={this.onOilyDefClick}>
                         <ListItemText> Learn more about <span style={{ color: '#96BD8A', fontWeight: 'bold' }}> Oily</span> skin </ListItemText>
