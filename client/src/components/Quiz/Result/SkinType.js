@@ -81,7 +81,10 @@ class SkinTypes extends Component {
             return this.renderComboDef()
         }
         return (
-            <div>
+            <div styles={{background: '#f8f3e5',
+            height: '100%',
+            width: '100%',
+            margin: '0px'}}>
                 {/*The users results */}
                 <Typography variant='h4' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }}>You have <span style={{ color: '#96BD8A', variant: 'h3', fontWeight: 'bold' }}>{this.props.result}</span> skin!</Typography>
                 <br />

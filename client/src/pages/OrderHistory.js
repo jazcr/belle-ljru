@@ -13,13 +13,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   Divider,
   Typography,
+  Grid,
   Box,
 } from '@material-ui/core';
 
 const useStyles = makeStyles({
-  icon: {
-    
+  mainContainer: {
+    background: '#f8f3e5',
+    height: '100%',
+    width: '100%',
+    margin: '0px'
   },
+  grid: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  }
 })
 
 
@@ -36,36 +44,40 @@ const OrderHistory = () => {
 
   return (
     <>
-      <Box component='div' className="container my-1">
-        <Link to="/">← Back to Products</Link>
+      <Box component='div' className={classes.mainContainer}>
+        <Link to="/" style={{ textDecoration: 'none', fontSize:'1rem', color: '#666', fontWeight: '600', paddingTop:'2rem'}}>← Back to Products</Link>
 
         {user ? (
-          <>
-            <Typography variant='h2'>
+          <Box component='div'>
+            <Typography variant='h3' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }} >
               Order History for {user.firstName} {user.lastName}
             </Typography>
             <Divider />
             {user.orders.map((order) => (
-              <Box component='div' key={order._id} className="my-2">
-                <Typography variant='h3'>
+              <Box component='div' key={order._id} style={{ paddingTop: '2rem'}}>
+                <Typography variant='h5' style={{ textAlign: 'center', paddingBottom: '1rem'}}>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </Typography>
-                <Box component='div' className="flex-row">
+                <Grid container className={classes.grid}>
                   {order.products.map(({ _id, image, name, price }, index) => (
-                    <Box component='div' key={index} className="card px-1 py-1">
-                      <Link to={`/products/${_id}`}>
-                        <img alt={name} src={`/images/${image}`} />
-                        <Box component="p">{name}</Box>
-                      </Link>
-                      <Box component='div'>
-                        <span>${price}</span>
+                    <Grid item xs={12} sm={8} md={4}>
+                      <Box component='div' key={index} style={{ textAlign: 'center'}}>
+                        <Link style={{ textDecoration: 'none', fontFamily:'Ephesis', color: '#666'}} to={`/products/${_id}`}>
+                          <img alt={name} src={`/images/${image}`} />
+                          <Box component="p">{name}
+                          </Box>
+                        </Link>
+                        <Box component='div'>
+                          <span>${price}</span>
+                        </Box>
                       </Box>
-                    </Box>
+                    </Grid>
                   ))}
-                </Box>
+                </Grid>
               </Box>
             ))}
-          </>
+
+          </Box>
         ) : null}
       </Box>
     </>

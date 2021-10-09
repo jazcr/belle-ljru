@@ -15,6 +15,10 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import { Link } from '@material-ui/core';
 
+import {
+  IconButton,
+} from '@material-ui/core';
+
 const stripePromise = loadStripe('pk_test_51JgHG1K26w07WHByfAHM2hrxkw41soOIIhAabUL4v1k2ZQyOhkjHdNReFaWnH0Us5r27zoqJYptMLsrickPCesBG00OZia2Ixq');
 
 const Cart = () => {
@@ -96,9 +100,10 @@ const Cart = () => {
                 <strong>Total: ${calculateTotal()}</strong>
 
                 {Auth.loggedIn() ? (
-                  <button onClick={submitCheckout}>Checkout</button>
+                  <IconButton style={{ fontSize: '1rem'}} onClick={submitCheckout}>Checkout</IconButton>
                 ) : (
-                  <Link style={{ textDecoration:'none', color:'#f8f3e5'}} href="/login">(Log In)</Link>
+                  <Link style={{ textDecoration:'none', color:'#f8f3e5'}} to="/login">(Log In)
+                  </Link>
                 )}
               </div>
             </div>
@@ -106,7 +111,7 @@ const Cart = () => {
             <div className="emptyCart">
             <div style={{ textAlign: 'center'}}><SelfImprovementIcon className="meditate" style={{fontSize:"50px"}}/></div>
             <h3 style={{ textAlign: 'center'}}>
-              You haven't added anything to your cart yet!
+              You have not added anything to your cart yet!
             </h3>
             </div>
           )}
