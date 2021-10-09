@@ -4,7 +4,29 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 
-function OrderHistory() {
+// import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+// import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
+// import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+// import Tooltip from '@material-ui/core/Tooltip';
+
+import { makeStyles } from '@material-ui/core/styles';
+import {
+  Divider,
+  Typography,
+  Box,
+} from '@material-ui/core';
+
+const useStyles = makeStyles({
+  icon: {
+    
+  },
+})
+
+
+const OrderHistory = () => {
+
+  const classes = useStyles();
+
   const { data } = useQuery(QUERY_USER);
   let user;
 
@@ -14,37 +36,38 @@ function OrderHistory() {
 
   return (
     <>
-      <div className="container my-1">
+      <Box component='div' className="container my-1">
         <Link to="/">← Back to Products</Link>
 
         {user ? (
           <>
-            <h2>
+            <Typography variant='h2'>
               Order History for {user.firstName} {user.lastName}
-            </h2>
+            </Typography>
+            <Divider />
             {user.orders.map((order) => (
-              <div key={order._id} className="my-2">
-                <h3>
+              <Box component='div' key={order._id} className="my-2">
+                <Typography variant='h3'>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
-                </h3>
-                <div className="flex-row">
+                </Typography>
+                <Box component='div' className="flex-row">
                   {order.products.map(({ _id, image, name, price }, index) => (
-                    <div key={index} className="card px-1 py-1">
+                    <Box component='div' key={index} className="card px-1 py-1">
                       <Link to={`/products/${_id}`}>
                         <img alt={name} src={`/images/${image}`} />
-                        <p>{name}</p>
+                        <Box component="p">{name}</Box>
                       </Link>
-                      <div>
+                      <Box component='div'>
                         <span>${price}</span>
-                      </div>
-                    </div>
+                      </Box>
+                    </Box>
                   ))}
-                </div>
-              </div>
+                </Box>
+              </Box>
             ))}
           </>
         ) : null}
-      </div>
+      </Box>
     </>
   );
 }
