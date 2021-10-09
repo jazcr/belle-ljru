@@ -25,7 +25,7 @@ function Quiz(props) {
   return (
     //Rendering the questions with the answer choices as unordered list 
       <div key={props.questionId} className={classes.quizBody}>
-             <Questions content={props.question} />
+        <Questions content={props.question} />
         <ul className="answerChoice">
           {props.answerChoices.map(renderAnswerChoices)}
         </ul>
