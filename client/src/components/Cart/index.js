@@ -10,10 +10,7 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Box from '@mui/material/Box';
-import Switch from '@mui/material/Switch';
-import Slide from '@mui/material/Slide';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import {Box, Slide} from '@mui/material';
 import CancelIcon from '@mui/icons-material/Cancel';
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import { Link } from '@material-ui/core';
@@ -116,96 +113,8 @@ const Cart = () => {
         </div>
       </Slide>
     </Box>
-    // <div className="cart">
-    //   <div className="close" onClick={toggleCart}>
-    //     [close]
-    //   </div>
-    //   <h2>Shopping Cart</h2>
-    //   {state.cart.length ? (
-    //     <div>
-    //       {state.cart.map((item) => (
-    //         <CartItem key={item._id} item={item} />
-    //       ))}
 
-    //       <div className="flex-row space-between">
-    //         <strong>Total: ${calculateTotal()}</strong>
-
-    //         {Auth.loggedIn() ? (
-    //           <button onClick={submitCheckout}>Checkout</button>
-    //         ) : (
-    //           <span>(log in to check out)</span>
-    //         )}
-    //       </div>
-    //     </div>
-    //   ) : (
-    //     <h3>
-    //       <span role="img" aria-label="shocked">
-    //         😱
-    //       </span>
-    //       You haven't added anything to your cart yet!
-    //     </h3>
-    //   )}
-    // </div>
   );
 };
 
 export default Cart;
-// <FormControlLabel
-//   control={<Switch checked={checked} onChange={handleChange} />}
-//   label="Show"
-// />
-// <Box sx={{ display: 'flex' }}>
-//   <Grow in={checked}>{icon}</Grow>
-//   {/* Conditionally applies the timeout prop to change the entry speed. */}
-//   <Grow
-//     in={checked}
-//     style={{ transformOrigin: '0 0 0' }}
-//     {...(checked ? { timeout: 1000 } : {})}
-//   >
-//     {icon}
-//   </Grow>
-// </Box> 
-
-// <Paper sx={{ m: 1 }} elevation={4}>
-// <Box component="svg" sx={{ width: 100, height: 100 }}>
-//   <Box
-//     component="polygon"
-//     sx={{
-//       fill: (theme) => theme.palette.common.white,
-//       stroke: (theme) => theme.palette.divider,
-//       strokeWidth: 1,
-//     }}
-//     points="0,100 50,00, 100,100"
-//   />
-// </Box>
-// </Paper>
-// );
-
-// export default function SimpleGrow() {
-// const [checked, setChecked] = React.useState(false);
-
-// const handleChange = () => {
-// setChecked((prev) => !prev);
-// };
-
-// return (
-// <Box sx={{ height: 180 }}>
-//   <FormControlLabel
-//     control={<Switch checked={checked} onChange={handleChange} />}
-//     label="Show"
-//   />
-//   <Box sx={{ display: 'flex' }}>
-//     <Grow in={checked}>{icon}</Grow>
-//     {/* Conditionally applies the timeout prop to change the entry speed. */}
-//     <Grow
-//       in={checked}
-//       style={{ transformOrigin: '0 0 0' }}
-//       {...(checked ? { timeout: 1000 } : {})}
-//     >
-//       {icon}
-//     </Grow>
-//   </Box>
-// </Box>
-// );
-// }
-
