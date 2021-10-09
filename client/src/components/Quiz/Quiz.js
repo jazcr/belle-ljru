@@ -1,14 +1,7 @@
 import React from 'react';
 import Questions from './Question';
 import AnswerChoices from './AnswerChoices';
-import { makeStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles(theme => ({
-  quizBody: {
-    backgroundColor: 'red'
-  }
-
-}))
 
 //Function for how the quiz is displayed
 function Quiz(props) {

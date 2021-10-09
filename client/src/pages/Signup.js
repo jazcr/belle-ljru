@@ -3,8 +3,33 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
+import { makeStyles } from '@material-ui/styles';
+import { Box, Grid, Button, TextField } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
+  signupDiv: {
+    padding: '10px',
+    margin: '10px',
+    textAlign: 'center'
+
+  },
+  loginLink: {
+    marginLeft: '30%',
+    textDecoration: 'none',
+    color: 'black',
+    fontSize: '100%'
+  },
+  submitBtn: {
+    textAlign: 'center'
+  }
+  
+  
+
+}));
 
 function Signup(props) {
+  const classes = useStyles();
+
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
@@ -32,53 +57,60 @@ function Signup(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
+      <Link className={classes.loginLink} to="/login">← Login</Link>
 
-      <h2>Signup</h2>
+      <h2 style={{textAlign: 'center'}}>Signup</h2>
+      <br />
       <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
-            id="firstName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
-            id="lastName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
+        <Grid className={classes.signupDiv}>
+          <TextField  
+          htmlFor="firstName"
+          label = 'First Name'
+          autoFocus
+          name="firstName"
+          type="firstName"
+          id="firstName"
+          onChange={handleChange}>
+            </TextField>
+        </Grid>
+        <Grid className={classes.signupDiv}>
+          <TextField 
+          htmlFor="lastName"
+          label = 'Last Name'
+          autoFocus
+          name="lastName"
+          type="lastName"
+          id="lastName"
+          onChange={handleChange}>
+            </TextField>
+        </Grid>
+        <Grid className={classes.signupDiv}>
+          <TextField 
+          htmlFor="email"
+            label = "Email"
+            autoFocus
             name="email"
             type="email"
             id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
+            onChange={handleChange}>
+            </TextField>
+        </Grid>
+        <Grid className={classes.signupDiv}>
+          <TextField 
+          htmlFor="pwd"
+          label = "Password"
+          autoFocus
+          name="password"
+          type="password"
+          id="pwd"
+          onChange={handleChange}>
+          </TextField>
+        </Grid>
+        <br />
+        <Grid className= {classes.submitBtn}>
+          <Button type="submit" variant='contained' style={{backgroundColor:'#6C4740', color:'white'}}>Submit</Button>
+        </Grid>
+        <br />
       </form>
     </div>
   );
