@@ -3,8 +3,31 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import { TextField, Grid, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles(theme => ({
+  signupLink: {
+    marginLeft: '30%',
+    textDecoration: 'none',
+    color: 'black',
+    fontSize: '100%'
+  },
+  loginDiv: {
+    padding: '10px',
+    margin: '10px',
+    textAlign: 'center'
+  },
+  submitBtn: {
+    textAlign: 'center'
+  }
+
+
+}));
 
 function Login(props) {
+  const classes = useStyles();
+
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
 
@@ -31,38 +54,39 @@ function Login(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+      <Link className={classes.signupLink} to="/signup">← Signup</Link>
 
-      <h2>Login</h2>
+      <h2 style={{textAlign: 'center'}}>Login</h2>
+      <br />
       <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
+        <Grid className={classes.loginDiv}>
+          <TextField
+            label = 'Your Email'
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
           />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
+        </Grid>
+        <Grid className={classes.loginDiv}>
+          <TextField
+           label = 'Password'
             name="password"
             type="password"
             id="pwd"
             onChange={handleChange}
           />
-        </div>
+        </Grid>
         {error ? (
-          <div>
+          <Grid>
             <p className="error-text">The provided credentials are incorrect</p>
-          </div>
+          </Grid>
         ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
+        <br />
+        <Grid className= {classes.submitBtn}>
+          <Button type="submit" variant='contained' style={{backgroundColor:'#6C4740', color:'white'}}>Submit</Button>
+        </Grid>
+        <br />
       </form>
     </div>
   );
