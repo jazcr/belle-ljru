@@ -1,3 +1,5 @@
+![skincarebanenr](https://www.bodezethaimassage.com/wp-content/uploads/2018/09/banner-design3.jpg)
+
 ## <h1 align='center'> Belle L'JaRu Skincare </h1>
 <p align='center'> URL of Heroku Deployed Application: </p>
 <p align='center'> URL of Github Repository: </p>
