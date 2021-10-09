@@ -45,7 +45,7 @@ class MainQuiz extends Component {
       //Else If the user is at the last question of the quiz then the users results are determine with the setResults function and is shown with the getResults function
       this.setResults(this.getSkinResults());
     }
-   
+
   }
 
   //Keeping track of the answers the user chooses and keeping count of the ids the 
@@ -75,7 +75,7 @@ class MainQuiz extends Component {
     });
   }
 
-  
+
   //Function to get results
   getSkinResults() {
     //Keeping track of the answers and ids the user is choosing
@@ -115,20 +115,34 @@ class MainQuiz extends Component {
 
   //Function to render the results as the results the user gets from the ids of the answers they chose
   renderResult() {
-    return <Results quizResult={this.state.result}  />;
+    return <Results quizResult={this.state.result} />;
   }
 
   //Rendering the whole quiz
   render() {
     return (
-      <div className="content">
-        <div className="header">
-         
-          <br />
+      
+      <div className="mainContainer">
+          <div className="header">
+            <br />
+          {/* If the user has chosen answers render the results page otherwise render the quiz*/}
+
+          {this.state.result ? 
+          (
+            <div>
+              {this.renderResult()}
+            </div>
+          )
+          : 
+          (
+            <div className='content'>
+              {this.renderQuiz()}
+            </div>
+          )
+          
+          }
+          </div>
         </div>
-        {/*If the user has chosen answers render the results page otherwise render the quiz*/}
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
-      </div>
     );
   }
 }

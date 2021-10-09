@@ -15,7 +15,6 @@ import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Tooltip from '@material-ui/core/Tooltip';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -106,7 +105,7 @@ const Detail= () => {
   return (
     <>
       {currentProduct && cart ? (
-        <Box component="div" className="container my-1">
+        <Box component="div">
           <Link to="/" style={{ textDecoration: 'none', fontSize:'1rem', color: '#666', fontWeight: '600', paddingTop:'2rem'}}>← Back to Products</Link>
 
           <Typography variant='h3' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }} >{currentProduct.name}</Typography>

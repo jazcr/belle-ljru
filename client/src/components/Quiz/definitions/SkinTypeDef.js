@@ -70,7 +70,7 @@ const OilyDef = ({ title, content, onBackClick, button }) => {
                     <br />
                     <Typography className={classes.content}> {content} </Typography>
                     <br /><br />
-                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '580px', width: '800px' }}>
+                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '580px', width: '1000px' }}>
                         <div style={{ height: 150 }}>
                         </div>
                     </Parallax>
@@ -87,11 +87,11 @@ const OilyDef = ({ title, content, onBackClick, button }) => {
                                 of your life!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={deepCleanse} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }} image={deepCleanse} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -106,11 +106,11 @@ const OilyDef = ({ title, content, onBackClick, button }) => {
                                 radiant and beautiful. Use in the morning after cleansing.
                             </p>
                             <br />
-                            <CardMedia component='img' height='600px' width='50px' image={toner} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }} image={toner} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -127,11 +127,11 @@ const OilyDef = ({ title, content, onBackClick, button }) => {
                                 a week and wake up with beautiful smooth skin!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={exfoliate} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }} image={exfoliate} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -147,11 +147,11 @@ const OilyDef = ({ title, content, onBackClick, button }) => {
                                 and night before moisturizing.
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={serum} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }} image={serum} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -165,11 +165,11 @@ const OilyDef = ({ title, content, onBackClick, button }) => {
                                 most hydrated, smooth skin with zero pores!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={priming} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={priming} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -185,7 +185,7 @@ const OilyDef = ({ title, content, onBackClick, button }) => {
 
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={antiSheer} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }} image={antiSheer} />
                             <br />
                         </CardContent>
                     </Card>
@@ -210,7 +210,7 @@ const DryDef = ({ title, content, onBackClick, button }) => {
                     <Typography className={classes.title}> {title} </Typography>
                     <br />
                     <Typography className={classes.content}> {content} </Typography>
-                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '580px', width: '800px' }}>
+                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '580px', width: '1000px' }}>
                         <div style={{ height: 150 }}>
                         </div>
                     </Parallax>
@@ -228,11 +228,11 @@ const DryDef = ({ title, content, onBackClick, button }) => {
                                 moisture. Use morning and night!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={gentleCleanse} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={gentleCleanse} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -247,11 +247,11 @@ const DryDef = ({ title, content, onBackClick, button }) => {
                                 radiant and beautiful. Use in the morning after cleansing.
                             </p>
                             <br />
-                            <CardMedia component='img' height='600px' width='50px' image={toner} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={toner} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -268,10 +268,10 @@ const DryDef = ({ title, content, onBackClick, button }) => {
                                 a week and wake up with beautiful smooth skin!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={exfoliate} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={exfoliate} />
                             <br />
                         </CardContent>
-                        <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                        <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                             <div style={{ height: 200 }}>
                             </div>
                         </Parallax>
@@ -292,11 +292,11 @@ const DryDef = ({ title, content, onBackClick, button }) => {
                                     from your skin! </p>
 
                                 <br />
-                                <CardMedia component='img' height='600px' width='50px' image={hyal} />
+                                <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={hyal} />
                                 <br />
                             </CardContent>
                         </Card>
-                        <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                        <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                             <div style={{ height: 200 }}>
                             </div>
                         </Parallax>
@@ -311,11 +311,11 @@ const DryDef = ({ title, content, onBackClick, button }) => {
 
                                 </p>
                                 <br />
-                                <CardMedia component='img' height='600px' width='50px' image={silkyMoisture} />
+                                <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={silkyMoisture} />
                                 <br />
                             </CardContent>
                         </Card>
-                        <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                        <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                             <div style={{ height: 200 }}>
                             </div>
                         </Parallax>
@@ -330,11 +330,11 @@ const DryDef = ({ title, content, onBackClick, button }) => {
                                     to a world of hydration. Use at night before bed to get the max hydration!
                                 </p>
                                 <br />
-                                <CardMedia component='img' height='600px' width='50px' image={maxOil} />
+                                <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={maxOil} />
                                 <br />
                             </CardContent>
                         </Card>
-                        <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                        <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                             <div style={{ height: 200 }}>
                             </div>
                         </Parallax>
@@ -349,7 +349,7 @@ const DryDef = ({ title, content, onBackClick, button }) => {
                                     to make your dry skin shine and look plump and protected!
                                 </p>
                                 <br />
-                                <CardMedia component='img' height='600px' width='50px' image={radiant} />
+                                <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={radiant} />
                                 <br />
                             </CardContent>
                         </Card>
@@ -373,7 +373,7 @@ const ComboDef = ({ title, content, onBackClick, button }) => {
                     <Typography className={classes.title}> {title} </Typography>
                     <br />
                     <Typography className={classes.content}> {content} </Typography>
-                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '580px', width: '800px' }}>
+                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '580px', width: '1000px' }}>
                         <div style={{ height: 150 }}>
                         </div>
                     </Parallax>
@@ -391,11 +391,11 @@ const ComboDef = ({ title, content, onBackClick, button }) => {
                                 of your life!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={deepCleanse} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={deepCleanse} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -410,11 +410,11 @@ const ComboDef = ({ title, content, onBackClick, button }) => {
                                 radiant and beautiful. Use in the morning after cleansing.
                             </p>
                             <br />
-                            <CardMedia component='img' height='600px' width='50px' image={toner} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={toner} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -431,11 +431,11 @@ const ComboDef = ({ title, content, onBackClick, button }) => {
                                 a week and wake up with beautiful smooth skin!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={exfoliate} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={exfoliate} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -456,11 +456,11 @@ const ComboDef = ({ title, content, onBackClick, button }) => {
                                 from your skin! </p>
 
                             <br />
-                            <CardMedia component='img' height='600px' width='50px' image={hyal} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={hyal} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={pinkflower} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -474,11 +474,11 @@ const ComboDef = ({ title, content, onBackClick, button }) => {
                                 most hydrated, smooth skin with zero pores!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={priming} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={priming} />
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '800px' }}>
+                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>
@@ -493,7 +493,7 @@ const ComboDef = ({ title, content, onBackClick, button }) => {
                                 Apply in the morning and anytime before being exposed to sunlight. Reapply throughout the day as needed!
                             </p>
                             <br />
-                            <CardMedia component='img' height='500px' image={antiSheer} />
+                            <CardMedia component='img' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%' }}  image={antiSheer} />
                             <br />
                         </CardContent>
                     </Card>
