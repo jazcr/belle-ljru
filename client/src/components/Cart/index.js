@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Box, Slide} from '@mui/material';
 import CancelIcon from '@mui/icons-material/Cancel';
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
-import { Link } from '@material-ui/core';
+import { Link } from "react-router-dom";
 
 const stripePromise = loadStripe('pk_test_51JgHG1K26w07WHByfAHM2hrxkw41soOIIhAabUL4v1k2ZQyOhkjHdNReFaWnH0Us5r27zoqJYptMLsrickPCesBG00OZia2Ixq');
 
