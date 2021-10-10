@@ -19,6 +19,15 @@ Welcome to **Belle L'JaRu**, the best skincare e-commerce store around! This MER
 
 
 ## View
+- Walkthrough of store products, logging in and purchasing items using Stripe!
+![appwalkthrough](./assets/appgif.gif)
+
+- Skin type quiz and routine pages
+![quiz](./assets/quiz.gif)
+
+- Order History page 
+![orderhistory](./assets/history.png)
+
 
 ## Installation
 
