@@ -9,7 +9,7 @@
 - [Description](#description)
 - [View](#view)
 - [Installation](#installation)
-- [Built With](#builtwith)
+- [Built With](#built-with)
 - [Credits](#credits)
 - [Contributors](#contributors)
 - [License](#license)
