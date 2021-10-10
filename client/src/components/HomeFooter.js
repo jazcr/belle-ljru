@@ -1,20 +1,23 @@
 import React from 'react'
-import { BottomNavigation, IconButton, Typography } from '@material-ui/core';
+import { BottomNavigation, IconButton, Typography, Box } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { ContactMail } from '@material-ui/icons';
 
 const HomeFooter = () => {
 
     return (
-
-        <BottomNavigation width="auto" style={{ background: '#f8f3e5' }}>
+            <BottomNavigation width="auto" style={{ background: '#f8f3e5'}}>
+            <Box component='div' style={{  display: 'flex'}}>
+                <Typography variant='body1' style={{ marginTop:'3%'}} > © Belle L'JaRu Skincare Store ||</Typography>
                 <IconButton href="https://github.com/jazcr/belle-ljru" target="_blank">
-                    <GitHubIcon />
+                    <GitHubIcon style={{ marginBottom:'45%'}}  />
                 </IconButton>
+                <Typography variant='body1' style={{ marginTop:'3%'}}>|| Got questions?</Typography>
                 <IconButton href="mailto:email@gmail.com">
-                    <ContactMail />
+                    <ContactMail style={{ marginBottom:'45%'}}  />
                 </IconButton>
-        </BottomNavigation>
+                </Box>
+            </BottomNavigation>
     )
 }
 
