@@ -39,6 +39,8 @@ Welcome to **Belle L'JaRu**, the best skincare e-commerce store around! This MER
 - [MongoDB](https://www.mongodb.com/)- A popular NoSQL database management program.
 - [GraphQL](https://graphql.org/) - A query language for APIs.
 - [Stripe](https://stripe.com/docs/stripe-js) - A JavaScript library for taking payments
+- [Material-UI](https://mui.com/) - A React styling library to create responsive and amazing designs for you webpage
+- [React-Parallax](https://www.npmjs.com/package/react-parallax) - A fun background component that allows users to create interesting scrolling background effects for their webpage 
 
 ## Credits
 - React Multiple Choice Quiz [tutorial](https://mitchgavan.com/react-quiz/)
