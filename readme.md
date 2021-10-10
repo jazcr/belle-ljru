@@ -3,7 +3,7 @@
 ## <h1 align='center'> Belle L'JaRu Skincare </h1>
 
 <p align='center'> URL of Heroku Deployed Application: </p>
-<p align='center'> URL of Github Repository: </p>
+<p align='center'> URL of Github Repository: https://github.com/jazcr/belle-ljru </p>
 
 # Table of Contents
 - [Description](#description)
