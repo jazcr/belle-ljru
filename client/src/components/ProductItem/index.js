@@ -99,7 +99,7 @@ function ProductItem(item) {
             variant='body2'
             color='textSecondary'
             component='p'
-            style={{ textAlign: 'right', marginRight: '1px' }}>
+            style={{ textAlign: 'right', marginRight: '3%' }}>
             Price: <span className={classes.span}>${price}</span>
           </Typography>
         </CardActionArea>

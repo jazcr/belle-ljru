@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { TextField, Grid, Button } from '@material-ui/core';
+import { TextField, Grid, Button, Typography, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -53,10 +53,14 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link className={classes.signupLink} to="/signup">← Signup</Link>
-
-      <h2 style={{textAlign: 'center'}}>Login</h2>
+    <div className="container">
+    <Button>
+      <Link to="/signup" style={{ textDecoration: 'none', fontSize:'1.25rem', color: '#666', fontWeight: '600', paddingTop:'10%', fontFamily: 'Karla'}}>
+      ←Signup
+      </Link>
+      </Button>
+      <Typography variant='h3' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }}>Login</Typography>
+      <Divider />
       <br />
       <form onSubmit={handleFormSubmit}>
         <Grid className={classes.loginDiv}>

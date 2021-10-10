@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 import { makeStyles } from '@material-ui/styles';
-import { Box, Grid, Button, TextField } from '@material-ui/core';
+import { Box, Grid, Button, TextField, IconButton, Divider, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   signupDiv: {
@@ -12,12 +12,6 @@ const useStyles = makeStyles(theme => ({
     margin: '10px',
     textAlign: 'center'
 
-  },
-  loginLink: {
-    marginLeft: '30%',
-    textDecoration: 'none',
-    color: 'black',
-    fontSize: '100%'
   },
   submitBtn: {
     textAlign: 'center'
@@ -56,10 +50,12 @@ function Signup(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link className={classes.loginLink} to="/login">← Login</Link>
-
-      <h2 style={{textAlign: 'center'}}>Signup</h2>
+    <div className="container">
+    <Button>
+      <Link style={{ textDecoration: 'none', fontSize:'1.25rem', color: '#666', fontWeight: '600', paddingTop:'10%', fontFamily: 'Karla'}} to="/login">←Login</Link>
+    </Button>
+      <Typography variant='h3' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }}>Signup</Typography>
+      <Divider />
       <br />
       <form onSubmit={handleFormSubmit}>
         <Grid className={classes.signupDiv}>

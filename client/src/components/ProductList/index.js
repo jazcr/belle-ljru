@@ -80,7 +80,7 @@ function ProductList() {
     <Box component='div' className={classes.search}>
       <TextField id="standard-basic" label="Search Item" variant="standard" value={search} onChange={e => setSearch(e.target.value)} 
       />
-      <SearchIcon style={{ display:'inline' }} />
+      <SearchIcon style={{ marginTop:'1.50%'}} />
       </Box>
       {state.products.length ? (
         <Grid container className={classes.grid}>
