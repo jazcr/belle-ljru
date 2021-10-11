@@ -92,5 +92,10 @@ body{
 @media only screen and (max-width:600px){
   .container1 > div {
       display: none;
+      background-color:rgb(230, 224, 215);
+  }
+  .fixed {
+    display: none;
+    background-color:rgb(230, 224, 215);
   }
 }
