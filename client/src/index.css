@@ -92,10 +92,19 @@ body{
 @media only screen and (max-width:600px){
   .container1 > div {
       display: none;
-      background-color:rgb(230, 224, 215);
+      background-color:#f8f3e5;
   }
   .fixed {
     display: none;
-    background-color:rgb(230, 224, 215);
+    background-color: #f8f3e5;
+  }
+  body{
+    background-color: #f8f3e5;
+  }
+  .homeFooter{
+    background-color: #f8f3e5;
+  }
+  .hideFooter{
+    display: none;
   }
 }
