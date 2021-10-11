@@ -15,6 +15,7 @@ import silkyMoisture from '../../../assets/silky_moisture.jpg';
 import maxOil from '../../../assets/max_oil.jpg';
 import radiant from '../../../assets/radiant_sun.jpg';
 import antiSheer from '../../../assets/anti_sun.jpg';
+import MainQuizCss from '../../../pages/MainQuiz.css';
 
 
 
@@ -91,7 +92,7 @@ const OilyDef = ({ title, content, onBackClick, button }) => {
                             <br />
                         </CardContent>
                     </Card>
-                    <Parallax bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
+                    <Parallax className={classes.bg} bgImage={green} strength={600} bgImageStyle={{ height: '650px', width: '1000px' }}>
                         <div style={{ height: 200 }}>
                         </div>
                     </Parallax>

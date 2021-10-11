@@ -1,6 +1,7 @@
 import { Typography, List, ListItem, ListItemText, Button, Link } from "@material-ui/core";
 import React, { Component } from "react";
 import { DryDef, OilyDef, ComboDef } from "../definitions/SkinTypeDef";
+import MainQuizCSS from '../../../pages/MainQuiz.css';
 
 //Creating the content and click functions for the skin type info cards
 class SkinTypes extends Component {
@@ -81,7 +82,7 @@ class SkinTypes extends Component {
             return this.renderComboDef()
         }
         return (
-            <div style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', float: 'right', paddingRight: '20%', paddingTop:'8%', fontSize: '1.5rem'}}>
+            <div id='result' style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', float: 'right', paddingRight: '20%', paddingTop:'8%', fontSize: '1.5rem'}}>
                 {/*The users results */}
                 <Typography variant='h4' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }}>You have <span style={{ color: '#96BD8A', variant: 'h3', fontWeight: 'bold' }}>{this.props.result}</span> skin!</Typography>
                 <br />

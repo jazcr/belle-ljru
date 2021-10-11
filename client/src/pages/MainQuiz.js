@@ -87,15 +87,11 @@ class MainQuiz extends Component {
     return answerCountKeys.filter(key => answerCount[key] === maxAnswerCount);
   }
 
-  //Determing the results the user with get
+  //Determing the results the user with get based on index of the most selected types
   setResults(result) {
-    //If the results it equal to one of the ids then the result is that of the id
-    if (result.length === 1) {
-      this.setState({ result: result[0] });
-      //Else the result is undetermined
-    } else {
-      this.setState({ result: 'Undetermined' });
-    }
+      this.setState({ result: result[0]});
+
+   
   }
 
 
