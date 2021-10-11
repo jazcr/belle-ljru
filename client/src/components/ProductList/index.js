@@ -8,7 +8,7 @@ import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 import { makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
-
+import InputAdornment from '@mui/material/InputAdornment';
 import {
   Box,
   Grid,
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     flexWrap: 'wrap'
   },
   search: {
-    paddingLeft: '3rem',
+    marginRight: '10px',
     textAlign: 'right'
   }
 })
@@ -78,9 +78,20 @@ function ProductList() {
   return (
     <Box component='div' spacing={2} className={classes.mainContainer}>
     <Box component='div' className={classes.search}>
-      <TextField id="standard-basic" label="Search Item" variant="standard" value={search} onChange={e => setSearch(e.target.value)} 
+      {/* <TextField id="standard-basic" label="Search Item" variant="standard" value={search} onChange={e => setSearch(e.target.value)} 
       />
-      <SearchIcon style={{ marginTop:'1.50%'}} />
+      <SearchIcon style={{ marginTop:'1.50%'}} /> */}
+      <TextField
+          label="Search Item"
+          id="outlined-start-adornment"
+          sx={{ m: 1, width: '25ch' }}
+          InputProps={{
+            endAdornment: <InputAdornment position="end"><SearchIcon style={{ marginTop:'1.50%'}} /></InputAdornment>,
+          }}
+          className={classes.search}
+          value={search} 
+          onChange={e => setSearch(e.target.value)}
+        />
       </Box>
       {state.products.length ? (
         <Grid container className={classes.grid}>
