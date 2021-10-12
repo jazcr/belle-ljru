@@ -105,7 +105,7 @@ const Detail= () => {
   return (
     <>
       {currentProduct && cart ? (
-        <Box component="div">
+        <Box component="div" style={{backgroundColor: '#f8f3e5'}}>
           <Link to="/" style={{ textDecoration: 'none', fontSize:'1rem', color: '#666', fontWeight: '600', paddingTop:'2rem'}}>← Back to Products</Link>
 
           <Typography variant='h3' style={{ textAlign: 'center', fontFamily: "'Ephesis', cursive" }} >{currentProduct.name}</Typography>
