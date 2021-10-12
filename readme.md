@@ -36,7 +36,7 @@ To start using this _Belle L'JaRu Skincare Store_ application you must follow th
 
 * Download Robo3T to test your database To download Robo3T click [here](https://robomongo.org/)
 
-* Open your terminal and make sure noje.js is installed. To download node.js click [here](https://nodejs.org/en/download/)
+* Open your terminal and make sure node.js is installed. To download node.js click [here](https://nodejs.org/en/download/)
 
 * Run command _npm i_ to install all the dependencies in this repository. 
 
