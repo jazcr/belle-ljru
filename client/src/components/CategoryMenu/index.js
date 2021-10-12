@@ -78,7 +78,7 @@ function CategoryMenu() {
 
   return (
     <>
-<Typography className={classes.heading} variant='h3'>Belle L'JaRu Skincare: Love the skin you are in!</Typography>
+<Typography className={classes.heading} variant='h3'>Belle L'JaRu Skincare: Love your skin!</Typography>
       <div className={classes.categories}>{categories.map((item) => (
         <IconButton className={classes.btn}
           key={item._id}
