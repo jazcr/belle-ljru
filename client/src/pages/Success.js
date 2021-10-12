@@ -39,7 +39,7 @@ function Success() {
   return (
     <Box component="div" className='success'>
       <Jumbotron>
-        <Typography variant='h4' style={{ height: 500, fontFamily: "'Ephesis', cursive" , clear: 'both', textAlign: 'center', paddingTop:'12.75rem', paddingLeft: '25rem',}}>Thank you for your purchase! You will be re-routed to the homepage soon.</Typography>
+        <Typography variant='h4' style={{ height: 500, fontFamily: "'Ephesis', cursive" , clear: 'both', textAlign: 'center', paddingTop:'12.75%', paddingLeft: '25%',}}>Thank you for your purchase! You will be re-routed to the homepage soon.</Typography>
       </Jumbotron>
     </Box>
   );
